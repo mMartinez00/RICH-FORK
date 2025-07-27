@@ -50,21 +50,32 @@ RICH/
 
 ### Prerequisites
 
-- Access to the shared GitHub account: **richincsad@gmail.com**
+- **Option 1**: Access to the shared GitHub account: **richincsad@gmail.com**
+- **Option 2**: Your own GitHub account (to be added as a collaborator)
 - Basic knowledge of HTML, CSS, and JavaScript
-- **Note**: This account has 2FA enabled (security codes go to Zarif's iPad)
 
 ### Quick Start
 
+#### **Option 1: Using Shared Account**
 1. **Access the Repository**
    - **Shared Account**: richincsad@gmail.com
    - **Repository**: https://github.com/richinc-org/RICH
-   - **Bookmark this page** for easy access
+   - **Note**: 2FA enabled (security codes go to Zarif's iPad)
 
 2. **Login Process**
    - Use the shared account credentials
    - **2FA Code**: Contact Zarif for the security code (sent to iPad)
    - **Device Trust**: Consider trusting devices to reduce 2FA prompts
+
+#### **Option 2: Using Your Own Account**
+1. **Get Added as Collaborator**
+   - Ask Zarif to add your GitHub username as a collaborator
+   - Accept the GitHub invitation via email
+   - No 2FA issues with your own account
+
+2. **Access the Repository**
+   - Go to: https://github.com/richinc-org/RICH
+   - You'll see the repository in your GitHub dashboard
 
 3. **Start Editing**
    - Navigate to the `docs/` folder
@@ -73,10 +84,10 @@ RICH/
 
 ### ⚠️ Important Notes
 
-- **Shared Account**: All interns use the same GitHub account (richincsad@gmail.com)
-- **2FA Security**: Security codes are sent to Zarif's iPad
-- **Device Management**: Consider trusting frequently used devices
-- **Communication**: Coordinate with Zarif for 2FA codes when needed
+- **Shared Account**: All interns can use richincsad@gmail.com (2FA codes go to Zarif's iPad)
+- **Personal Accounts**: You can also be added as a collaborator (no 2FA issues)
+- **Choose Your Method**: Pick whichever option works better for you
+- **Communication**: Coordinate with Zarif for either 2FA codes or collaborator invites
 
 ## ✏️ Contributing
 
@@ -174,19 +185,26 @@ This repository contains **only frontend files** for security reasons:
 
 ### Common Issues & Solutions
 
-#### 🔐 2FA Access Issues
+#### 🔐 2FA Access Issues (Shared Account)
 - **Problem**: GitHub asks for security code on new devices
 - **Solution**: Contact Zarif for the 2FA code (sent to iPad)
 - **Prevention**: Trust frequently used devices to reduce prompts
+- **Alternative**: Use your own GitHub account as a collaborator
+
+#### 👥 Collaborator Access Issues (Personal Account)
+- **Problem**: Can't access the repository
+- **Solution**: Ask Zarif to add your GitHub username as a collaborator
+- **Check**: Look for invitation email from GitHub
+- **Accept**: Click "Accept" in the invitation email
 
 #### 📱 Device Management
-- **Trusted Devices**: Add your work computer as a trusted device
+- **Trusted Devices**: Add your work computer as a trusted device (shared account)
 - **Session Management**: Stay logged in on shared devices
 - **Communication**: Coordinate login times to avoid conflicts
 
 #### 🔑 Account Access
-- **Shared Account**: richincsad@gmail.com
-- **Credentials**: Available in the Notion dashboard
+- **Shared Account**: richincsad@gmail.com (credentials in Notion dashboard)
+- **Personal Account**: Your own GitHub account (no 2FA issues)
 - **Backup**: Keep credentials in a secure, accessible location
 
 ### Getting Help
