@@ -52,6 +52,7 @@ RICH/
 
 - **Option 1**: Access to the shared GitHub account: **richincsad@gmail.com**
 - **Option 2**: Your own GitHub account (to be added as a collaborator)
+- **Option 3**: Your own GitHub account (Fork & Pull Request workflow) ⭐ **Recommended**
 - Basic knowledge of HTML, CSS, and JavaScript
 
 ### Quick Start
@@ -77,15 +78,70 @@ RICH/
    - Go to: https://github.com/richinc-org/RICH
    - You'll see the repository in your GitHub dashboard
 
-3. **Start Editing**
-   - Navigate to the `docs/` folder
-   - Find the file you want to edit
-   - Click the pencil icon to edit
+#### **Option 3: Fork & Pull Request Workflow** ⭐ **Recommended**
+**This is the best way to collaborate! No 2FA issues, and Zarif can review your changes.**
+
+### **Step-by-Step Guide (Super Simple!)**
+
+#### **Step 1: Fork (Make Your Copy)**
+1. Go to: https://github.com/richinc-org/RICH
+2. Look for the **"Fork"** button (top right, next to "Watch" and "Star")
+3. Click **"Fork"** - this creates your own copy
+4. Wait for it to finish (you'll see a loading animation)
+
+#### **Step 2: Download Your Copy**
+1. On your fork page, click the **green "Code"** button
+2. Click the **copy icon** next to the URL (it looks like two squares)
+3. Open **Terminal** (Mac) or **Command Prompt** (Windows)
+4. Type these commands one by one:
+   ```bash
+   git clone [paste the URL you copied]
+   cd RICH
+   ```
+
+#### **Step 3: Make Your Changes**
+1. Open the `docs` folder on your computer
+2. Find the file you want to edit (like `index.html`)
+3. Edit the file with any text editor
+4. Save your changes
+
+#### **Step 4: Upload Your Changes**
+In the terminal, type these commands:
+```bash
+git add .
+git commit -m "I updated the website"
+git push
+```
+
+#### **Step 5: Ask Zarif to Review**
+1. Go back to your fork on GitHub
+2. You'll see a yellow banner saying "This branch is X commits ahead"
+3. Click **"Compare & pull request"**
+4. Write a message like "I updated the homepage text"
+5. Click **"Create pull request"**
+
+#### **Step 6: Wait for Approval**
+- Zarif will see your request
+- He'll review your changes
+- If he likes them, he'll click "Merge"
+- Your changes will go live on the website!
+
+### **What This Means:**
+- **Fork** = "I want my own copy to work on"
+- **Pull Request** = "Hey Zarif, can you check my work?"
+- **Merge** = "Yes, your work looks good, I'll add it to the website"
+
+### **Why This is Better:**
+- ✅ No 2FA codes needed
+- ✅ Zarif can check your work before it goes live
+- ✅ You can work on your own time
+- ✅ Easy to track who made what changes
 
 ### ⚠️ Important Notes
 
 - **Shared Account**: All interns can use richincsad@gmail.com (2FA codes go to Zarif's iPad)
 - **Personal Accounts**: You can also be added as a collaborator (no 2FA issues)
+- **Fork & Pull Request**: Best option - no 2FA, review process, individual tracking
 - **Choose Your Method**: Pick whichever option works better for you
 - **Communication**: Coordinate with Zarif for either 2FA codes or collaborator invites
 
@@ -249,3 +305,49 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Remember: GitHub Pages is your safe testing space. Experiment freely!** 🚀
 
 **Made with ❤️ by the RICH Team**
+
+## 👨‍💼 **For Repository Owners (Zarif)**
+
+### **How to Handle Intern Work (Super Simple!)**
+
+When interns send you work, here's what to do:
+
+#### **Step 1: Check Your Notifications**
+1. Go to: https://github.com/richinc-org/RICH
+2. Look for a **red number** next to "Pull requests" (top of page)
+3. Click on **"Pull requests"**
+
+#### **Step 2: Review Their Work**
+1. Click on any Pull Request (it will say something like "Update homepage")
+2. Scroll down to see what they changed
+3. Look at the **"Files changed"** tab to see their edits
+
+#### **Step 3: Approve or Ask for Changes**
+**If you like their work:**
+- Click **"Review changes"** (top right)
+- Click **"Approve"**
+- Click **"Submit review"**
+
+**If you want them to fix something:**
+- Click **"Review changes"**
+- Click **"Request changes"**
+- Write what you want them to fix
+- Click **"Submit review"**
+
+#### **Step 4: Merge (Add to Website)**
+1. If you approved their work, click the **green "Merge pull request"** button
+2. Click **"Confirm merge"**
+3. Their changes are now live on the website! 🎉
+
+### **What This Means:**
+- **Pull Request** = "Intern sent you work to check"
+- **Review** = "You look at their work"
+- **Approve** = "This looks good"
+- **Merge** = "Add their work to the website"
+
+### **Why This is Better for You:**
+- ✅ No more 2FA coordination
+- ✅ You control what goes live
+- ✅ You can ask for fixes before publishing
+- ✅ Easy to manage multiple interns
+- ✅ You can work on your own schedule
