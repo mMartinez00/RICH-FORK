@@ -1,0 +1,69 @@
+const express = require("express");
+const multer = require("multer");
+const fs = require("fs");
+const cors = require("cors");
+
+const app = express();
+app.use(cors());
+
+// Password for upload authorization
+const uploadPassword = "RICH2025";
+
+// Ensure uploads folder exists
+const uploadsDir = "uploads";
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir);
+}
+
+// Multer storage config
+const storage = multer.diskStorage({
+  destination: uploadsDir,
+  filename: (req, file, cb) => cb(null, Date.now() + "-" + file.originalname)
+});
+const upload = multer({ storage });
+
+// Ensure videos.json exists
+const videosFile = "videos.json";
+if (!fs.existsSync(videosFile)) {
+  fs.writeFileSync(videosFile, JSON.stringify([]));
+}
+
+// Authorization middleware
+function authMiddleware(req, res, next) {
+  const authHeader = req.headers.authorization;
+  if (!authHeader) {
+    return res.status(401).json({ message: "Unauthorized: Missing authorization header" });
+  }
+  const password = authHeader.replace("Bearer ", "");
+  if (password !== uploadPassword) {
+    return res.status(403).json({ message: "Forbidden: Invalid password" });
+  }
+  next();
+}
+
+// Upload endpoint with authorization
+app.post("/upload", authMiddleware, upload.single("video"), (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ message: "No file uploaded" });
+  }
+  const videos = JSON.parse(fs.readFileSync(videosFile));
+  const newVideo = {
+    url: `/uploads/${req.file.filename}`,
+    uploadedAt: new Date()
+  };
+  videos.unshift(newVideo);
+  fs.writeFileSync(videosFile, JSON.stringify(videos, null, 2));
+  res.json({ message: "Video uploaded successfully", video: newVideo });
+});
+
+// Endpoint to get all videos
+app.get("/videos", (req, res) => {
+  const videos = JSON.parse(fs.readFileSync(videosFile));
+  res.json(videos);
+});
+
+// Serve uploaded videos statically
+app.use("/uploads", express.static(uploadsDir));
+
+const PORT = 3000;
+app.listen(PORT, () => console.log(`✅ Server running on http://localhost:${PORT}`));

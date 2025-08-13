@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RICH | Reach Into Cultural Heights</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* Your existing styles here ... */
+  </style>
+</head>
+<body>
+
+  <!-- Your existing header and content ... -->
+
+  <main>
+    <h1>Welcome to RICH</h1>
+
+    <!-- Highlight and images -->
+    <div class="highlight-message">
+      <span style="color: #004aad;">Reach</span>
+      <span style="color: #ff1617;">Into</span>
+      <span style="color: #ff9a01;">Cultural</span>
+      <span style="color: #008036;">Heights</span>
+    </div>
+
+    <img src="ComputerEngagementImage.jpg" alt="Students engaged in computer learning" />
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/1UW0hPzwHcY" title="YouTube video player" allowfullscreen></iframe>
+    </div>
+
+    <div id="videoList">
+      <iframe src="https://www.youtube.com/embed/J47G9RSTWaY" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Video upload form (hidden initially) -->
+    <form id="uploadForm" enctype="multipart/form-data" style="display:none; justify-content:center; gap:1rem; flex-wrap:wrap;">
+      <input type="file" name="video" accept="video/*" required />
+      <button type="submit">Upload Video</button>
+    </form>
+
+    <!-- Employee login form -->
+    <form id="loginForm" style="margin-top: 2rem; max-width: 400px; display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 3rem;">
+      <input type="password" id="employeePassword" placeholder="Enter employee password" required />
+      <button type="submit">Login</button>
+    </form>
+  </main>
+
+  <!-- Footer here -->
+
+  <script>
+    const API_URL = "http://localhost:3000";
+    const loginForm = document.getElementById('loginForm');
+    const uploadForm = document.getElementById('uploadForm');
+    const passwordInput = document.getElementById('employeePassword');
+    const videoList = document.getElementById("videoList");
+    const EMPLOYEE_PASSWORD = "RICH2025";
+
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (passwordInput.value === EMPLOYEE_PASSWORD) {
+        alert("Login successful. You can now upload videos.");
+        loginForm.style.display = "none";
+        uploadForm.style.display = "flex";
+        loadVideos();
+      } else {
+        alert("Incorrect password. Access denied.");
+        passwordInput.value = "";
+      }
+    });
+
+    async function loadVideos() {
+      try {
+        const res = await fetch(`${API_URL}/videos`);
+        const videos = await res.json();
+
+        const videoHTML = videos.map(v => `
+          <video controls>
+            <source src="${API_URL}${v.url}" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        `).join("");
+
+        videoList.innerHTML += videoHTML;
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    uploadForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+
+      try {
+        const res = await fetch(`${API_URL}/upload`, {
+          method: "POST",
+          headers: {
+            // Pass the password in the authorization header for backend authMiddleware
+            Authorization: "Bearer " + EMPLOYEE_PASSWORD
+          },
+          body: formData
+        });
+
+        if (res.ok) {
+          alert("Video uploaded successfully!");
+          e.target.reset();
+          loadVideos();
+        } else {
+          const error = await res.json();
+          alert("Upload failed: " + (error.message || "Unknown error"));
+        }
+      } catch (err) {
+        alert("Upload error.");
+        console.error(err);
+      }
+    });
+  </script>
+
+</body>
+</html>
