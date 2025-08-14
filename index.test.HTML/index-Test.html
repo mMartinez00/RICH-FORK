@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RICH | Reach Into Cultural Heights</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color:#111;
+      line-height:1.6;
+      /* Improved background */
+      background: linear-gradient(135deg, #e0f7ff 0%, #ffffff 100%);
+      background-image: 
+        radial-gradient(circle at 20% 20%, rgba(0,150,255,0.05) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(255,150,0,0.05) 1px, transparent 1px);
+      background-size: 40px 40px, 60px 60px;
+      background-repeat: repeat, repeat;
+    }
+
+    /* Header */
+    header {
+      background:#fff;
+      padding:1rem 2rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:100;
+      flex-wrap:wrap;
+    }
+
+    .logo-container { display:flex; align-items:center; }
+    .logo { display:flex; align-items:center; text-decoration:none; color:#000; gap:0.75rem; }
+    .logo img { height:48px; width:auto; transition:all 0.3s ease; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); }
+    .logo img:hover { transform:scale(1.05); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25)); }
+    .logo-text { font-size:1.8rem; font-weight:bold; letter-spacing:0.05em; }
+
+    .nav-buttons-container {
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+
+    nav {
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+
+    nav a {
+      text-decoration:none;
+      color:#fff;
+      font-weight:500;
+      padding:0.5rem 1rem;
+      border-radius:6px;
+      transition: transform 0.3s, opacity 0.3s;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    nav a.home { background:#004aad; }
+    nav a.about { background:#e63946; }
+    nav a.programs { background:#2a9d8f; }
+
+    nav a:hover {
+      opacity:0.8;
+      transform: scale(1.05);
+    }
+
+    .header-buttons {
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+
+    .header-buttons .btn {
+      font-weight:500;
+      padding:0.6rem 1.2rem;
+      border-radius:6px;
+      color:#fff;
+      transition: transform 0.3s, background 0.3s;
+      animation: float 2s ease-in-out infinite;
+      text-decoration:none;
+    }
+
+    .header-buttons .donate { background:#f4a261; }
+    .header-buttons .donate:hover { background:#d88a3f; }
+    .header-buttons .explore { background:#2a9d8f; }
+    .header-buttons .explore:hover { background:#1f7e71; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    /* Main */
+    main { text-align:center; padding:3rem 1.5rem; }
+    main h1 { font-size:2.5rem; margin-bottom:1rem; }
+    .highlight-message { font-size:2rem; font-weight:600; margin-bottom:2rem; }
+    main img { max-width:700px; width:90%; height:auto; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); margin-bottom:2rem; transition:0.3s; }
+    main img:hover { transform:scale(1.02); }
+
+    /* Video Carousel */
+    .video-carousel-container { max-width:800px; width:95%; margin:2rem auto; position:relative; }
+    .video-carousel { display:flex; overflow:hidden; scroll-behavior:smooth; gap:15px; }
+    .video-carousel video, .video-carousel iframe { min-width:100%; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+
+    .carousel-btn { 
+      position:absolute; 
+      top:50%; 
+      transform:translateY(-50%); 
+      background:#004aad; 
+      color:#fff; 
+      border:none; 
+      padding:0.6rem 1rem; 
+      border-radius:50%; 
+      cursor:pointer; 
+      font-size:1.5rem; 
+      transition:0.3s; 
+      display:flex; 
+      justify-content:center; 
+      align-items:center; 
+      z-index:10; 
+    }
+    .carousel-btn:hover{ background:#00337a; transform:translateY(-50%) scale(1.1); }
+    .carousel-btn.left{ left:10px; }
+    .carousel-btn.right{ right:10px; }
+
+    /* Game Images Carousel */
+    .carousel-container { max-width:800px; width:95%; margin:2rem auto; overflow:hidden; position:relative; }
+    #imageCarousel { display:flex; transition: transform 0.5s ease; }
+    #imageCarousel img { width:100%; flex-shrink:0; border-radius:12px; margin:0; opacity:0.9; transition: transform 0.3s, opacity 0.3s; }
+    #imageCarousel img:hover { transform: scale(1.05); opacity:1; }
+
+    /* Forms */
+    #loginForm, #uploadForm { margin:2rem auto; max-width:400px; display:flex; justify-content:center; gap:0.5rem; flex-wrap:wrap; }
+    #loginForm input, #uploadForm input[type="file"] { flex:1 1 60%; padding:0.5rem; border-radius:6px; border:1px solid #ccc; font-size:1rem; }
+    #loginForm button, #uploadForm button { flex:1 1 30%; padding:0.5rem; background:#004aad; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:600; transition:0.3s; }
+    #loginForm button:hover, #uploadForm button:hover { background:#00337a; }
+
+    /* Footer */
+    footer { background:#222; color:#eee; padding:2rem 1rem; text-align:center; }
+    .footer-links { margin-bottom:1rem; }
+    .footer-links a { color:#aaa; margin:0 0.7rem; text-decoration:none; }
+    .footer-links a:hover { color:#fff; }
+
+    .footer-social {
+      display:flex;
+      justify-content:center;  /* center the icons */
+      gap:1rem;
+      margin-bottom:0.5rem;
+    }
+    .footer-social a { color:#ccc; font-size:1.6rem; transition:transform 0.3s, color 0.3s; }
+    .footer-social a:hover { transform:scale(1.2); }
+    .footer-social a[aria-label="Instagram"]:hover { color:#e4405f; }
+    .footer-social a[aria-label="TikTok"]:hover { color:#000; }
+    .footer-social a[aria-label="YouTube"]:hover { color:#ff0000; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <a href="index.html" class="logo">
+      <img src="images/brand-globe.png" alt="RICH Logo" />
+      <span class="logo-text">
+        <span style="color:#004aad;">R</span>
+        <span style="color:#ff1617;">I</span>
+        <span style="color:#ff9a01;">C</span>
+        <span style="color:#008036;">H</span>
+      </span>
+    </a>
+  </div>
+
+  <div class="nav-buttons-container">
+    <nav>
+      <a href="index.html" class="home">Home</a>
+      <a href="mission.html" class="about">About</a>
+      <a href="overview.html" class="programs">Programs</a>
+    </nav>
+    <div class="header-buttons">
+      <a href="https://www.paypal.com/donate?hosted_button_id=JW6KJBX9789RC" class="btn donate">Donate</a>
+      <a href="overview.html" class="btn explore">Explore</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Welcome to RICH</h1>
+  <div class="highlight-message">
+    <span style="color:#004aad;">Reach</span>
+    <span style="color:#ff1617;">Into</span>
+    <span style="color:#ff9a01;">Cultural</span>
+    <span style="color:#008036;">Heights</span>
+  </div>
+  <img src="ComputerEngagementImage.jpg" alt="Students engaged in computer learning" />
+
+  <!-- Video Carousel -->
+  <div class="video-carousel-container">
+    <div class="video-carousel">
+      <iframe src="https://www.youtube.com/embed/1UW0hPzwHcY" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/J47G9RSTWaY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <button class="carousel-btn left">&#10094;</button>
+    <button class="carousel-btn right">&#10095;</button>
+  </div>
+
+  <!-- Game Images Carousel -->
+  <div class="carousel-container">
+    <div id="imageCarousel"></div>
+    <button class="carousel-btn left">&#10094;</button>
+    <button class="carousel-btn right">&#10095;</button>
+  </div>
+
+  <!-- Login & Upload -->
+  <form id="loginForm">
+    <input type="password" id="employeePassword" placeholder="Enter employee password" required />
+    <button type="submit">Login</button>
+  </form>
+  <form id="uploadForm" enctype="multipart/form-data" style="display:none;">
+    <input type="file" name="video" accept="video/*" required />
+    <button type="submit">Upload Video</button>
+  </form>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-social">
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+  <p>&copy; 2025 RICH. All rights reserved.</p>
+</footer>
+
+<script>
+  // Video Carousel
+  const videoCarousel = document.querySelector('.video-carousel');
+  document.querySelector('.video-carousel-container .carousel-btn.left').addEventListener('click', ()=>{ 
+    videoCarousel.scrollBy({ left:-videoCarousel.offsetWidth, behavior:'smooth' }); 
+  });
+  document.querySelector('.video-carousel-container .carousel-btn.right').addEventListener('click', ()=>{ 
+    videoCarousel.scrollBy({ left:videoCarousel.offsetWidth, behavior:'smooth' }); 
+  });
+
+  // Employee Login
+  const loginForm = document.getElementById('loginForm');
+  const uploadForm = document.getElementById('uploadForm');
+  const passwordInput = document.getElementById('employeePassword');
+  const EMPLOYEE_PASSWORD = "RICH2025";
+
+  loginForm.addEventListener('submit', e=>{
+    e.preventDefault();
+    if(passwordInput.value===EMPLOYEE_PASSWORD){
+      alert("Login successful!");
+      loginForm.style.display="none";
+      uploadForm.style.display="flex";
+    }else{
+      alert("Incorrect password!");
+      passwordInput.value="";
+    }
+  });
+
+  // Game Images Carousel
+  const gameAnswers = [
+    { A1: "images/gameAnswers/matter-1.png", A2: "images/gameAnswers/responsible-2.png", A3: "images/gameAnswers/considerate-3.png", A4: "images/gameAnswers/strategies-4.png" },
+    { A1: "images/gameAnswers/strategies-5.png", A2: "images/gameAnswers/responsible-2.png", A3: "images/gameAnswers/considerate-6.png", A4: "images/gameAnswers/matter-1.png" },
+    { A1: "images/gameAnswers/matter-8.png", A2: "images/gameAnswers/considerate-10.png", A3: "images/gameAnswers/responsible-9.png", A4: "images/gameAnswers/strategies-11.png" },
+    { A1: "images/gameAnswers/matter-1.png", A2: "images/gameAnswers/responsible-2.png", A3: "images/gameAnswers/considerate-3.png", A4: "images/gameAnswers/strategies-11.png" },
+    { A1: "images/gameAnswers/responsible-12.png", A2: "images/gameAnswers/matter-1.png", A3: "images/gameAnswers/strategies-13.png", A4: "images/gameAnswers/considerate-6.png" },
+    { A1: "images/gameAnswers/matter-14.png", A2: "images/gameAnswers/responsible-15.png", A3: "images/gameAnswers/considerate-16.png", A4: "images/gameAnswers/strategies-17.png" },
+    { A1: "images/gameAnswers/considerate-6.png", A2: "images/gameAnswers/responsible-2.png", A3: "images/gameAnswers/strategies-18.png", A4: "images/gameAnswers/matter-1.png" },
+    { A1: "images/gameAnswers/matter-1.png", A2: "images/gameAnswers/responsible-2.png", A3: "images/gameAnswers/considerate-3.png", A4: "images/gameAnswers/strategies-20.png" },
+    { A1: "images/gameAnswers/responsible-2.png", A2: "images/gameAnswers/matter-1.png", A3: "images/gameAnswers/strategies-21.png", A4: "images/gameAnswers/considerate-19.png" },
+    { A1: "images/gameAnswers/matter-14.png", A2: "images/gameAnswers/responsible-15.png", A3: "images/gameAnswers/considerate-16.png", A4: "images/gameAnswers/strategies-17.png" }
+  ];
+
+  const imageCarousel = document.getElementById('imageCarousel');
+  const images = [];
+  gameAnswers.forEach(q => { images.push(q.A1,q.A2,q.A3,q.A4); });
+  images.forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    imageCarousel.appendChild(img);
+  });
+
+  let idx = 0;
+  const leftBtn = document.querySelector('.carousel-container .carousel-btn.left');
+  const rightBtn = document.querySelector('.carousel-container .carousel-btn.right');
+  const total = images.length;
+
+  function updateCarousel() {
+    imageCarousel.style.transform = `translateX(-${idx*100}%)`;
+  }
+
+  leftBtn.onclick = ()=>{ idx = idx===0 ? total-1 : idx-1; updateCarousel(); }
+  rightBtn.onclick = ()=>{ idx = idx===total-1 ? 0 : idx+1; updateCarousel(); }
+</script>
+
+</body>
+</html>
