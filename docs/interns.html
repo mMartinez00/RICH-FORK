@@ -101,6 +101,87 @@
 
     }
 
+    /* Top Banner Styles */
+    .top-bar {
+      background-color: #2f4279; /* Dark blue background */
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-end; /* Aligns the button to the right */
+      gap: 16px;
+    }
+
+    .divider-bar {
+      width: 3px;
+      height: auto;
+      background: white;
+      border-radius: 2px;  
+    }
+
+    .donate-button {
+        background-color: transparent;
+        color: #ffffff;
+        padding: 8px 18px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 17px;
+        transition: background-color 0.3s ease;
+    }
+
+    .vision-button {
+        background-color: transparent;
+        color: #ffffff;
+        padding: 8px 18px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 17px;
+        transition: background-color 0.3s ease;
+    }
+
+    .vision-button:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+    }
+
+    .donate-button:hover {
+        background-color: #d43423e8;
+    }
+
+    /* Banner styles */
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: white;
+      gap: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+    }
+
+    .globe {
+      width: 150px;
+      height: 150px;
+      animation: spin 20s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .divider {
+      width: 3px;
+      height: 80px;
+      background: #888;
+      border-radius: 4px;
+    }
+
+    .svg-image {
+      width: 280px;
+      height: auto;
+      margin-top: 10px;
+    }
 
 
     .contain {
@@ -361,7 +442,11 @@
 
 
 
-      <div class="container-fluid">
+      <div class="top-bar">
+        <a href="https://www.richinc.org/RICH/rich_new_vision/rich_new_vision.html" class="vision-button" target="_blank"> New Vision Launch </a>
+        <div class="divider-bar"></div> 
+        <a href="https://www.paypal.com/donate?hosted_button_id=JW6KJBX9789RC" class="donate-button" target="_blank"> Donate </a>
+      </div>
 
         <!-- <div class="text-center pics_in_a_row">
           <a href="https://www.instagram.com/p/CqocMt_PwZ3/?utm_source=ig_web_button_share_sheet">
