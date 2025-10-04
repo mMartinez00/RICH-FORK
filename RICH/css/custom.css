@@ -1,0 +1,20 @@
+.hidden {
+     display: none;
+}
+body {
+     margin: 0px;
+     padding: 0px;
+}
+#myLogo {
+     padding: 0px;
+}
+.nav-bar {
+     display: flex;
+     border: solid black;
+     justify-content: flex-start;
+
+}
+#site-logo img {
+  width: 350px;
+  height: auto;
+}
