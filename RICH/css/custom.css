@@ -10,11 +10,13 @@
 }
 
 body {
+     
      margin: 0px;
      padding: 0px;
      background-color: var(--color-bg);
 }
 
+/* TOP HEADER */
 
 
 .top-header {
@@ -23,8 +25,11 @@ body {
      /* border: solid blue; */
      align-items: center;
      justify-content: flex-start;
-     background-color: var(--color-header-bg);
+     background: #162957;  
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); 
 }
+
+
 
 .top-filler {
      /* border: solid yellow; */
@@ -46,8 +51,13 @@ body {
 }
 
 .top-links a {
-  color: var(--color-text);
+  color: white;
   font-weight: 500;
+}
+
+.top-links a:hover {
+     color: #f79533;
+     transition: color 0.3s ease;     
 }
 
 /* Donate Styling */
@@ -78,17 +88,26 @@ body {
 
 
 
-
+/* BOTTOM HEADER */
 
 .bottom-header {
      /* border: solid red; */
      display: flex;
-     padding: 10px;
-     align-items: center;
-     
+     padding: 5px;
+     align-items: center; 
+     backdrop-filter: blur(8px);
+     border-bottom: 2px solid #f79533;
+     background: #ffffff; /* stay bright */
+     border-bottom: 2px solid #f36f21; 
 }
 
-.bottom-header .logo {
+
+.main-nav .nav-bottom-item a:hover {
+  color: #f79533;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+.bottom-header .logo-container {
      height: 80px;
      /* border: solid black; */
      flex: .5;
@@ -97,7 +116,7 @@ body {
      align-items: center;
 }
 
-.bottom-header .logo img {
+.bottom-header .logo-container img {
      height: 90px;
      width: auto;
 }
@@ -119,4 +138,102 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+
+/* Hero Section */
+
+.hero-slideshow {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  animation: slideShow 35s infinite ease-in-out;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 2s ease-in-out;
+}
+
+
+@keyframes slideShow {
+  0%   { background-image: url('/RICH/QueensCollege.jpg'); }
+  5%  { background-image: url('/RICH/QueensCollege.jpg'); } 
+  25%  { background-image: url('/RICH/image7.jpg'); }
+  40%  { background-image: url('/RICH/Image5.jpg'); }
+  60%  { background-image: url('/RICH/Image3.jpg'); }
+  80%  { background-image: url('/RICH/image0.jpeg'); }        
+  100% { background-image: url('/RICH/QueensCollege.jpg'); } 
+}
+
+.hero-slideshow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.428), transparent);
+  z-index: 0; /* behind text */
+}
+
+.hero-slideshow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(0, 0, 0, 0.25) 40%,     
+    rgba(0, 0, 0, 0) 100%   
+  );
+  z-index: 1;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2; 
+  padding-left: 6rem;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.hero-content h1 span {
+  color: #ff7733; 
+}
+
+.hero-content p {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #eee;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.9rem 2rem;
+  background: #ff7733;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #ff5500;
+  transform: translateY(-2px);
 }
