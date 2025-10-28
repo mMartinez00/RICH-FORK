@@ -1,4 +1,4 @@
-.
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -250,12 +250,15 @@
     }
 
   </style>
-
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/contact.css" />
 </head>
 
 <body>
-
-  <div class="site-wrap">
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -266,8 +269,96 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
 
+    <!--LOAD HEADER (Header Styles Contained in header.css)-->
+    <div id="header-container"></div>
+    <script>
+      fetch("header.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("header-container").innerHTML = html);
+    </script>
 
-    <div id="myLogo" class="site-navbar-wrap js-site-navbar bg-white">
+    <!-- Contact Section -->
+    <section class="contact-container">
+      <span class="big-circle"></span>
+
+      <div class="form">
+        <!-- Left Info -->
+        <div class="contact-info">
+          <h3 class="title">Let’s Get in Touch</h3>
+          <p class="text">
+            Interested In The RICH, Inc., Reach For Success Online Program?
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <i class="fa-solid fa-location-dot"></i>
+              <p><u><a
+                  href="https://www.google.com/maps/dir//reach+into+the+cultural+heights+address/@40.6726398,-74.0425785,11z/data=!3m1!5s0x89c2606085db8af3:0x73c8c0062a899fb1!4m8!4m7!1m0!1m5!1m1!1s0x89c260e3e404989b:0x31e1b9781781d668!2m2!1d-73.8180215!2d40.7343144">
+                  Boulevard, CEP Hall 2 Flushing, New York 11367. </a></u></p>
+            </div>
+            <div class="information">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Contact@richinc.org</p>
+            </div>
+            <div class="information">
+              <i class="fa-solid fa-phone"></i>
+              <p>+1 (929) 242-9036</p>
+            </div>
+          </div>
+
+          <p><a href="https://classroom.google.com/c/NzA5NDAxOTM3MjY2?cjc=3vfpigb" target="_blank">Get a sample of our Online Classroom here</a></p>
+
+          <div class="social-media">
+            <p>Connect with us:</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
+  <input type="hidden" name="access_key" value="da91b3f9-83d9-4259-920d-7b7e1ad58ec1">
+  <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you.html">          
+  <h3 class="title">Contact Us</h3>
+
+  <div class="input-container">
+    <input type="text" name="name" class="input" required />
+    <label>Full Name</label>
+  </div>
+
+  <div class="input-container">
+    <input type="email" name="email" class="input" required />
+    <label>Email</label>
+  </div>
+
+  <div class="input-container">
+    <input type="tel" name="phone" class="input" />
+    <label>Phone</label>
+  </div>
+
+  <div class="input-container textarea">
+    <textarea name="message" class="input" required></textarea>
+    <label>Message</label>
+  </div>
+
+  <button type="submit" class="btn">Send Message</button>
+</form>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/contact.js"></script>
+
+    <!--MADE HIDDEN-->
+    <div id="myLogo" class="site-navbar-wrap js-site-navbar bg-white" hidden>
 
       <div class="container-fluid">
 
@@ -390,12 +481,12 @@
         </div>
       </div>
     </div>
-    <div id="logoHeight" style="height: 350px;"></div>
+    <div id="logoHeight" style="height: 350px;" hidden></div>
 
-    <div id="piaContainer" class="container">
+    <div id="piaContainer" class="container" hidden>
 
-      <div class="col-md-8 mx-auto no-sidebar">
-        <div class="shapely-content">
+      <div class="col-md-8 mx-auto no-sidebar" hidden>
+        <div class="shapely-content" hidden>
 
           <div id="contact-beginning" class="contact-section">
             <h1> Contact Us </h1><br>
@@ -458,6 +549,7 @@
     </div>
   </footer>
   </div>
+  <!--MADE HIDDEN ENDS-->
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>

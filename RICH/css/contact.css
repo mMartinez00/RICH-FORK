@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f8fc;
+}
+
+/* offset for header */
+.contact-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  background: #f8f9fc;
+}
+
+
+/* main form */
+.form {
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+/* right form panel */
+.contact-form {
+  background: linear-gradient(135deg, #162957, #1f3d82);
+  position: relative;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* decorative circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.circle.one {
+  width: 130px;
+  height: 130px;
+  top: 120px;
+  right: -40px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.circle.two {
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  right: 30px;
+  background: rgba(173, 216, 230, 0.25);
+}
+
+.contact-form::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: #2b3e6f;
+  transform: rotate(45deg);
+  top: 50px;
+  left: -13px;
+}
+
+/* input section */
+form {
+  position: relative;
+  z-index: 5;
+}
+
+.title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.input {
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: none;
+  border-radius: 25px;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #f79533;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input:focus + label {
+  top: 0;
+  left: 16px;
+  font-size: 0.75rem;
+  color: #f79533;
+  background: #2b3e6f;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+textarea.input {
+  min-height: 120px;
+  resize: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* send button */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b3e6f;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #f79533;
+  color: #fff;
+}
+
+/* left panel info */
+.contact-info {
+  padding: 2.5rem;
+}
+
+.contact-info .title {
+  color: #162957;
+}
+
+.text {
+  color: #333;
+  margin: 1rem 0 1.8rem;
+}
+
+.information {
+  display: flex;
+  color: #444;
+  margin: 0.6rem 0;
+}
+
+.information i {
+  color: #f36f21;
+  margin-right: 0.8rem;
+  margin-top: 6px;
+}
+
+
+.social-media {
+  margin-top: 2rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #162957;
+  color: #fff;
+  margin-right: 0.4rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #f36f21;
+}
+
+/* decorative shapes */
+.big-circle {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #162957, #1f3d82);
+  bottom: 40%;
+  right: 50%;
+  transform: translate(-40%, 15%);
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(2px);
+  box-shadow: inset 0 0 60px rgba(13, 36, 79, 0.25);
+}
+
+.square {
+  position: absolute;
+  height: 400px;
+  top: 55%;
+  left: 50%;
+  transform: translate(160%, 20%);
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.big-circle,
+.square,
+.circle {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
