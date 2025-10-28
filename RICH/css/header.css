@@ -1,0 +1,162 @@
+/* ===================== TOP HEADER ===================== */
+.top-header {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: flex-start;
+  background: #162957;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.top-filler {
+  flex: .7;
+}
+
+.top-links {
+  flex: 0 1 35%;
+  max-width: 700px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-links a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.top-links a:hover {
+  color: #f79533;
+  transition: color 0.3s ease;
+}
+
+/* Donate button */
+.nav-top-item.donate a {
+  display: inline-block;
+  background: linear-gradient(135deg, #f79533, #f37055);
+  color: white;
+  font-weight: 600;
+  padding: 8px 24px;
+  border-radius: 40px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(243, 112, 85, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-top-item.donate a:hover {
+  background: linear-gradient(135deg, #f9a13b, #f8855d);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(243, 112, 85, 0.4);
+}
+
+.nav-top-item.donate a:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(243, 112, 85, 0.3);
+}
+
+/* ===================== BOTTOM HEADER ===================== */
+.bottom-header {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid #f36f21;
+  background: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.main-nav .nav-bottom-item a:hover {
+  color: #f79533;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+
+.bottom-header .logo-container {
+  height: 80px;
+  flex: .5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-header .logo-container img {
+  height: 90px;
+  width: auto;
+}
+
+.bottom-header .main-nav {
+  flex: .7;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bottom-header .main-nav > ul {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bottom-item {
+  position: relative;
+}
+
+/* ===================== DROPDOWN MENU ===================== */
+.nav-bottom-item .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  /* background: #ebebebeb; */
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(22, 41, 87, 0.15);
+  border: 1px solid rgba(247, 149, 51, 0.15);
+  padding: 0.8rem 0;
+  list-style: none;
+  min-width: 240px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  display: none;
+  z-index: 9999;
+  white-space: nowrap;
+}
+
+.nav-bottom-item .dropdown li {
+  padding: 0;
+}
+
+.nav-bottom-item .dropdown li a {
+  display: block;
+  padding: 10px 18px;
+  /* color: #2b3a55; */
+  color: #1e2b4c;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-bottom-item a:link,
+.nav-bottom-item a:visited {
+  color: #1e2b4c;
+  text-decoration: none;
+}
+
+.nav-bottom-item .dropdown li a:hover {
+  /* background-color: #ffffffde;
+  color: #f79533; */
+  background: rgba(247, 149, 51, 0.08);
+  color: #f79533;
+  border-left: 3px solid #f79533;
+}
+
+.nav-bottom-item:hover > .dropdown {
+  display: block;
+}

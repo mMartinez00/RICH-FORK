@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-s
-
 <head>
   <title>RICH &mdash; Reach Into Cultural Heights</title>
   <meta charset="utf-8">
@@ -140,13 +138,12 @@ s
       text-decoration: underline;
     }
   </style>
-
+  <link rel="stylesheet" href="css/header.css">
 </head>
 
 <body>
 
-  <div class="site-wrap">
-
+  <!-- <div class="site-wrap"> -->
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
@@ -156,8 +153,16 @@ s
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
 
+    <!--LOAD HEADER (Header Styles Contained in header.css)-->
+    <div id="header-container"></div>
+    <script>
+      fetch("header.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("header-container").innerHTML = html);
+    </script>
 
-    <div id="myLogo" class="site-navbar-wrap js-site-navbar bg-white">
+    <!--MADE HIDDEN-->
+    <div id="myLogo" class="site-navbar-wrap js-site-navbar bg-white" hidden>
 
       <div class="container-fluid">
 
@@ -279,7 +284,8 @@ s
       </div>
     </div>
 
-    <div id="logoHeight" style="height: 320px;"></div>
+    <div id="logoHeight" style="height: 320px;" hidden></div>
+    <!--MADE HIDDEN ENDS-->
 
     <div id="piaContainer" class="container">
       <div class="col-md-8 mx-auto no-sidebar">
@@ -357,7 +363,7 @@ s
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 
   <!--
     <div class="py-5 quick-contact-info">
@@ -413,7 +419,7 @@ Phone: (123) 3240-345-9348 </p>
       </div>
     </div>
   </footer>
-  </div>
+  <!-- </div> -->
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>

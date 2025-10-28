@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom right, #162957 35%, #f36f21 80%, #d85b1d 100%);
+  overflow-x: hidden;
+}
+
+/* space below the header */
+.login-wrapper {
+  background: none; /* remove gradient from here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 140px);
+}
+
+/* central white card */
+.login-box {
+  background: #fff;
+  padding: 3rem 4rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 420px;
+  border: 1px solid rgba(22, 41, 87, 0.05);
+}
+
+.login-box h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #162957;
+  margin-bottom: 0.5rem;
+}
+
+.login-box p {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+/* input fields */
+.input-field {
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  border-radius: 50px;
+  padding: 0.75rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.input-field i {
+  color: #888;
+  margin-right: 0.75rem;
+}
+
+.input-field input {
+  border: none;
+  outline: none;
+  background: none;
+  flex: 1;
+  font-size: 1rem;
+  color: #162957;
+}
+
+/* button */
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #f79533, #f36f21);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(243, 111, 33, 0.3);
+}
+
+/* social icons */
+.social-login {
+  margin-top: 2rem;
+}
+
+.social-login p {
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.social-login a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #162957;
+  border-radius: 50%;
+  color: #162957;
+  margin: 0 0.4rem;
+  transition: 0.3s;
+}
+
+.social-login a:hover {
+  background: #162957;
+  color: #fff;
+}
+
+/* make sure header stays above everything */
+#site-header {
+  position: relative;
+  z-index: 999;
+}

@@ -96,10 +96,10 @@
       box-shadow: 5px 5px rgba(0, 0, 0, .25);
     }
 
-    body {
+    /* body {
       padding: 35px;
 
-    }
+    } */
 
 
 
@@ -230,13 +230,11 @@
       }
     }
   </style>
-
+  <link rel="stylesheet" href="css/header.css">
 </head>
 
 <body>
-
-
-  <div class="site-wrap">
+  <!-- <div class="site-wrap"> -->
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -247,8 +245,16 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
 
+    <!--LOAD HEADER (Header Styles Contained in header.css)-->
+    <div id="header-container"></div>
+    <script>
+      fetch("header.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("header-container").innerHTML = html);
+    </script>
 
-    <div style="top: 0px;" id="myLogo" class="site-navbar-wrap js-site-navbar bg-white">
+    <!--MADE HIDDEN-->
+    <div style="top: 0px;" id="myLogo" class="site-navbar-wrap js-site-navbar bg-white" hidden>
 
 
 
@@ -374,7 +380,7 @@
         </div>
       </div>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br>
+    <!--MADE HIDDEN ENDS-->
     <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////
   START
   ////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -979,7 +985,7 @@ END
         </div>
       </div>
     </footer>
-  </div>
+  <!-- </div> -->
 
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/jquery-migrate-3.0.1.min.js"></script>
