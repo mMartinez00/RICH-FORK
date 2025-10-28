@@ -26,20 +26,58 @@ body {
   justify-content: flex-start;
   color: #fff;
   font-family: 'Inter', sans-serif;
-  animation: slideShow 35s infinite ease-in-out;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
-  transition: background-image 2s ease-in-out;
+  animation: slideShow 25s infinite steps(1), zoomIn 25s infinite;
 }
 
+/* Zoom-in effect synced with slideshow */
+@keyframes zoomIn {
+  0% {
+    background-size: 100%;
+  }
+  20% {
+    background-size: 110%;
+  }
+
+  /* Keep zoomed in until next image switch */
+  20.01% {
+    background-size: 100%;
+  }
+  40% {
+    background-size: 110%;
+  }
+
+  40.01% {
+    background-size: 100%;
+  }
+  60% {
+    background-size: 110%;
+  }
+
+  60.01% {
+    background-size: 100%;
+  }
+  80% {
+    background-size: 110%;
+  }
+
+  80.01% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
+
+/* Image swap (instant change at each zoom end) */
 @keyframes slideShow {
-  0%   { background-image: url('/RICH/QueensCollege.jpg'); }
-  5%   { background-image: url('/RICH/QueensCollege.jpg'); }
-  25%  { background-image: url('/RICH/image7.jpg'); }
-  40%  { background-image: url('/RICH/Image5.jpg'); }
-  60%  { background-image: url('/RICH/Image3.jpg'); }
-  80%  { background-image: url('/RICH/image0.jpeg'); }
-  100% { background-image: url('/RICH/QueensCollege.jpg'); }
+  0%, 19.99%  { background-image: url('/RICH/QueensCollege.jpg'); }
+  20%, 39.99% { background-image: url('/RICH/image7.jpg'); }
+  40%, 59.99% { background-image: url('/RICH/Image5.jpg'); }
+  60%, 79.99% { background-image: url('/RICH/Image3.jpg'); }
+  80%, 99.99% { background-image: url('/RICH/image0.jpeg'); }
+  100%        { background-image: url('/RICH/QueensCollege.jpg'); }
 }
 
 .hero-slideshow::before {
