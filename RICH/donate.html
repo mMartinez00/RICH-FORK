@@ -260,9 +260,9 @@
             font-size: 18px;
         }
 
-        .other-btn:hover {
+        /* .other-btn:hover {
             background: #f0f0d0;
-        }
+        } */
 
         .checkbox-wrapper {
             display: flex;
@@ -700,6 +700,7 @@
             background: #ff9933;
             color: white;
         }
+
     </style>
 
 </head>
@@ -755,7 +756,7 @@
 
                 <div class="currency-row">
                     <button class="currency-btn active">USD</button>
-                    <button class="other-btn" id="otherBtn">Other</button>
+                    <button class="other-btn amount-btn" id="otherBtn">Other</button>
                 </div>
 
                 <div class="checkbox-wrapper">
@@ -860,13 +861,13 @@
                     <div class="summary-details">
                         <div class="summary-row">
                             <span class="summary-label" id="summaryLabel">Donation One-Time</span>
-                            <span class="summary-value" id="summaryValue">$500.00</span>
+                            <span class="summary-value amount-display" id="summaryValue">$500.00</span>
                         </div>
                     </div>
 
                     <div class="summary-total">
                         <span>Total</span>
-                        <span id="summaryTotal">$500.00</span>
+                        <span id="summaryTotal" class="amount-display">$500.00</span>
                     </div>
                 </div>
             </div>
@@ -922,8 +923,12 @@
         const cancelBtn = document.getElementById('cancelBtn');
         const confirmBtn = document.getElementById('confirmBtn');
         const customInput = document.getElementById('customInput');
+        const valueChange = document.querySelectorAll(".amount-display");
 
         otherBtn.addEventListener('click', () => {
+            amountButtons.forEach(btn => btn.classList.remove('active'));
+            otherBtn.classList.add('active');
+            selectedAmount = 0;
             customModal.classList.add('show');
             customInput.focus();
         });
@@ -940,6 +945,13 @@
                 customModal.classList.remove('show');
                 customInput.value = '';
             }
+            const formattedAmount = selectedAmount.toLocaleString('en-US', {
+                style: 'currency',
+                currency: 'USD'
+            });
+            valueChange.forEach(element => {
+                element.innerHTML = formattedAmount;                
+            });
         });
 
         // Donate Button - Go to Payment Page
