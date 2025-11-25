@@ -1,59 +1,129 @@
+/* Parent wrapper controls where sticky ends */
+.sticky-parent {
+  position: relative;
+  padding-bottom: 150px;   /* keeps last image from floating weirdly */
+}
+
+/* Section wrapper */
 .overview {
-     padding-top: 50px;
+  padding-top: 5px;        /* FIXED: small gap from header */
+  padding-bottom: 100px;
 }
 
+/* Two-column layout */
 .overview-container {
-     border: 3px solid red;
-     width: 100%;
-     display: flex;
-     gap: 40px;
-     height: max-content;
-}
-
-.left-side-container {
-     border: 3px solid black;
-     width: 55%; 
-
-}
-
-.sections {
-     display: flex;
-     flex-direction: column;
-     align-items: flex-start;
-     gap: 50px;
-     margin-bottom: 50vh;  
-}
-
-.right-side-container {
-     border: 3px solid green;
-     width: 45%;
-     top: 120px;
-     position: relative;
-}
-
-.left-side-container .sections > h1 {
-     font-size: 2.6rem;
-     font-weight: 600;
-}
-
-.left-side-container .sections > p {
-     max-width: 750px;
-     font-size: 1.5rem;
-     line-height: 1.75; 
-     text-align: left;
-     margin-top: -10px;    
-     
-}
-
-.scroll-img {
-  opacity: 0;
-  position: sticky;
-  transition: opacity .4s ease;
   width: 100%;
-  border-radius: 12px;
+  display: flex;
+  gap: 40px;
 }
 
-.scroll-img.active {
-  opacity: 1;
+/* Left column */
+.left-side-container {
+  width: 55%;
+}
+
+/* Each scroll section */
+.sections {
+  min-height: 80vh;        /* FIXED: closer to header, not full 100vh */
+  display: flex;
+  align-items: center;
   position: relative;
 }
+
+/* Sticky text block */
+.text-block {
+  position: sticky;
+  top: 105px;              /* FIXED: aligns with your header height */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .6s ease, transform .6s ease;
+  max-width: 750px;
+}
+
+.text-block.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Text styling */
+.left-side-container .sections h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.left-side-container .sections p {
+  font-size: 1.5rem;
+  line-height: 1.75;
+}
+
+/* Bullet styling */
+.rich-bullets {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  line-height: 1.75rem;
+  font-size: 1.3rem;
+}
+
+.rich-bullets li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
+
+/* Right sticky image container */
+.right-side-container {
+  width: 45%;
+  position: sticky;
+  top: 105px;             /* synced with text */
+  height: 75vh;
+  overflow: visible;
+}
+
+/* Image stacking wrapper */
+.image-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Image base state */
+.scroll-img {
+  position: absolute;
+  top: 50%;               /* KEEPING YOUR ORIGINAL CENTER POSITION */
+  left: 50%;
+  width: 70%;             /* KEEPING YOUR SCALE */
+  height: auto;
+  transform: translate(-50%, -50%) scale(0.9) translateY(40px);
+  opacity: 0;
+  border-radius: 12px;
+  object-fit: contain;
+  transition:
+    opacity 0.9s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s ease;
+  filter: blur(6px);
+  z-index: 0;
+}
+
+/* Active image animation */
+.scroll-img.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05) translateY(0px);
+  filter: blur(0);
+  z-index: 5;
+}
+
+/* Exit animation */
+.scroll-img.fading-out {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.85) translateY(-40px);
+  filter: blur(12px);
+  z-index: 3;
+}
+
+/* Same vertical anchor for all images */
+#img1 { top: 50%; }
+#img2 { top: 50%; }
+#img3 { top: 50%; }
+#img4 { top: 50%; }

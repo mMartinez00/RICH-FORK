@@ -55,58 +55,135 @@
 
 
     <section class="overview">
-      <div class="overview-container">
-        <div class="left-side-container">
-          <div class="sections section-1" data-img="img1">
-            <h1>Reach For Success Program</h1>
-            <p>The RICH philosophy emphasizes how affirmative language, as demonstrated in the “Reach for Success” Program, can be used as a focal point for the development of self-respect and respect for others. Students learn to model constructive language skills, using program 4 guiding principles</p>
-          </div>
-          <div class="sections section-2" data-img="img2">
-            <h1>Guiding Principles</h1>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-          </div>
+  <div class="sticky-parent">
 
-          <div class="sections section-3" data-img="img3">
-            <h1>Impact</h1>
-            <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+    <div class="overview-container">
+
+      <div class="left-side-container">
+
+        <div class="sections section-1" data-img="img1">
+          <div class="text-block">
+            <h1>Reach For Success Program</h1>
+            <ul class="rich-bullets">
+              <li>The RICH philosophy is based on the idea that the words we use influence how we think and act.</li>
+              <li>Through the “Reach for Success” Program, students explore the impact of affirmative, positive communication.</li>
+              <li>They learn how constructive language improves both self-respect and respect for others.</li>
+              <li>Students practice using positive communication in real conversations and classroom interactions.</li>
+              <li>These skills help them build confidence, empathy, and stronger relationships.</li>
+              <li>The program is structured around four guiding principles that support academic and emotional growth.</li>
+            </ul>
           </div>
         </div>
 
+        <div class="sections section-2" data-img="img2">
+          <div class="text-block">
+            <h1>Guiding Principles</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+              dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              ultricies nec, pellentesque eu, pretium quis, sem.
+            </p>
+          </div>
+        </div>
 
-        <div class="right-side-container">
-          <img id="img1" class="scroll-img" src="images/overview-image1.jpg">
-          <img id="img2" class="scroll-img" src="images/botimage.png">
-          <img id="img3" class="scroll-img" src="images/about_3.jpg">
+        <div class="sections section-2b" data-img="img2">
+          <div class="text-block">
+            <h2>I Matter</h2>
+            <p>
+              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+              dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              ultricies nec, pellentesque eu, pretium quis, sem.
+            </p>
+          </div>
+        </div>
+
+        <div class="sections section-2c" data-img="img3">
+          <div class="text-block">
+            <h2>Responsibility</h2>
+            <p>
+              Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+              consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+              viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus
+              varius laoreet.
+            </p>
+          </div>
+        </div>
+
+        <div class="sections section-2d" data-img="img4">
+          <div class="text-block">
+            <h2>Considerate</h2>
+            <p>
+              Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+              consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right-side-container">
+        <div class="image-stack">
+          <img id="img1" class="scroll-img" src="images/overview-image1.jpg" alt="">
+          <img id="img2" class="scroll-img" src="images/matter.png" alt="">
+          <img id="img3" class="scroll-img" src="images/responsibility.png" alt="">
+          <img id="img4" class="scroll-img" src="images/considerate.png" alt="">
         </div>
       </div>
-    </section>
 
-  <script>
+    </div>
+  </div>
+</section>
+
+<script>
 document.addEventListener("DOMContentLoaded", () => {
-
   const sections = document.querySelectorAll(".sections");
   const images = document.querySelectorAll(".scroll-img");
+  const textBlocks = document.querySelectorAll(".text-block");
 
   function showImage(id) {
-    images.forEach(img => img.classList.remove("active"));
-    document.getElementById(id).classList.add("active");
+    const newImg = document.getElementById(id);
+
+    images.forEach(img => {
+      if (img === newImg) return;
+      img.classList.remove("active");
+      img.classList.add("fading-out");
+      setTimeout(() => img.classList.remove("fading-out"), 900);
+    });
+
+    newImg.classList.add("active");
+  }
+
+  function setActiveText(block) {
+    textBlocks.forEach(tb => tb.classList.remove("active"));
+    block.classList.add("active");
   }
 
   window.addEventListener("scroll", () => {
-    const triggerPoint = window.innerHeight * 0.6;
+    const mid = window.innerHeight * 0.5;
 
     sections.forEach(section => {
       const rect = section.getBoundingClientRect();
+      const inMiddle = rect.top < mid;
+      const notTooHigh = rect.bottom > mid + 150;
 
-      if (rect.top < triggerPoint && rect.bottom > triggerPoint) {
-        showImage(section.dataset.img);
+      if (inMiddle && notTooHigh) {
+        const imgId = section.dataset.img;
+        const textBlock = section.querySelector(".text-block");
+        showImage(imgId);
+        setActiveText(textBlock);
       }
     });
   });
 
+  // initial state
   showImage("img1");
+  if (textBlocks[0]) {
+    textBlocks[0].classList.add("active");
+  }
 });
 </script>
+
 
 
 
@@ -127,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-      <div class="container-fluid">
+      <div class="container-fluid" hidden>
 
         <div class="text-center pics_in_a_row">
           <a href="https://www.instagram.com/p/CqocMt_PwZ3/?utm_source=ig_web_button_share_sheet">
