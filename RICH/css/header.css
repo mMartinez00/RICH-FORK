@@ -116,7 +116,7 @@
   top: 100%;
   left: 0;
   /* background: #ebebebeb; */
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.978);
   backdrop-filter: blur(8px);
   box-shadow: 0 8px 24px rgba(22, 41, 87, 0.15);
   border: 1px solid rgba(247, 149, 51, 0.15);
@@ -177,3 +177,5 @@
   transform: translateY(-60px); 
   transition: transform 0.25s ease;
 }
+
+
