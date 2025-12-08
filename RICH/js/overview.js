@@ -11,7 +11,7 @@ const revealObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.4
+  threshold: 0.3
 });
 
 // APPLY INITIAL OBSERVERS
