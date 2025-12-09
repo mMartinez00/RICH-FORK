@@ -10,7 +10,6 @@ function initHeaderScroll() {
   let bottomStart = bottom.offsetTop;
 
   function onScroll() {
-    // recalc if needed (dynamic layout)
     bottomStart = bottom.offsetTop;
 
     if (window.scrollY >= bottomStart) {
@@ -22,26 +21,18 @@ function initHeaderScroll() {
 
   window.addEventListener("scroll", onScroll);
   window.addEventListener("resize", onScroll);
-
-  // run once immediately
   onScroll();
 }
 
 function loadHeader() {
-  fetch("header.html")
+  return fetch("header.html")
     .then(res => res.text())
     .then(html => {
       document.getElementById("header-container").outerHTML = html;
-
-      // IMPORTANT: only now does the header exist
       initHeaderScroll();
     });
 }
 
-// Load header every time page loads
-loadHeader();
-
-// Fix back-button cache restoring the page without re-running scripts
 window.addEventListener("pageshow", (e) => {
   if (e.persisted) {
     loadHeader();
@@ -51,4 +42,9 @@ window.addEventListener("pageshow", (e) => {
 window.addEventListener("load", () => {
   history.scrollRestoration = "manual";
   window.scrollTo(0, 0);
+});
+
+// Make sure header loads before body
+loadHeader().then(() => {
+  document.body.classList.add("loaded");
 });
