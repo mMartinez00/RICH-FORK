@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-  <style>
+  <!-- <style>
     @import url(https://fonts.googleapis.com/css?family=Bangers);
     @import url(https://fonts.googleapis.com/css?family=Niconne);
 
@@ -229,7 +229,310 @@
         padding-right: 55px;
       }
     }
-  </style>
+  </style> -->
+  <style>
+  :root{
+    --ink:#0f172a;
+    --muted:#64748b;
+    --card:#ffffff;
+    --soft:#f1f5f9;
+    --ring: rgba(15, 23, 42, .10);
+    --brand: #2f4279; /* your blue vibe */
+    --brand2:#0eadad; /* your teal glow vibe */
+  }
+
+  .interns-wrap{
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  }
+
+  .interns-hero{
+    padding: clamp(24px, 4vw, 52px) 0;
+    border-bottom: 1px solid rgba(15, 23, 42, .08);
+  }
+
+  .interns-hero .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    padding: .4rem .75rem;
+    border-radius: 999px;
+    background: rgba(14, 173, 173, .10);
+    color: var(--brand2);
+    font-weight: 700;
+    letter-spacing: .02em;
+  }
+
+  .interns-title{
+    margin: 12px 0 10px;
+    color: var(--ink);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    font-size: clamp(28px, 3vw, 44px);
+    line-height: 1.1;
+  }
+
+  .interns-sub{
+    color: var(--muted);
+    max-width: 70ch;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .interns-controls{
+    padding: 18px 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(8px);
+    background: rgba(248, 250, 252, .75);
+    border-bottom: 1px solid rgba(15, 23, 42, .08);
+  }
+
+  .year-pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
+  }
+
+  .year-pill{
+    border: 1px solid rgba(15, 23, 42, .12);
+    background: white;
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-weight: 700;
+    cursor:pointer;
+    transition: .15s ease;
+    user-select:none;
+  }
+
+  .year-pill:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(2, 6, 23, .06);
+  }
+
+  .year-pill.active{
+    border-color: rgba(47, 66, 121, .35);
+    background: rgba(47, 66, 121, .08);
+    color: var(--brand);
+  }
+
+  .intern-search{
+    width:100%;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 23, 42, .12);
+    padding: 10px 12px;
+    outline: none;
+    box-shadow: 0 0 0 0 rgba(14,173,173,0);
+    transition: .15s ease;
+  }
+
+  .intern-search:focus{
+    border-color: rgba(14, 173, 173, .55);
+    box-shadow: 0 0 0 4px rgba(14, 173, 173, .12);
+  }
+
+  .intern-grid{
+    padding: 28px 0 40px;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+  }
+
+  .intern-card{
+    grid-column: span 12;
+    background: var(--card);
+    border: 1px solid rgba(15, 23, 42, .10);
+    border-radius: 18px;
+    overflow:hidden;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, .04);
+    cursor:pointer;
+    transition: .18s ease;
+    display:flex;
+    min-height: 150px;
+  }
+
+  .intern-card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(2, 6, 23, .08);
+  }
+
+  .intern-media{
+    width: 140px;
+    flex: 0 0 140px;
+    background: var(--soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+
+  .intern-media img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display:block;
+  }
+
+  .intern-body{
+    padding: 14px 16px;
+    display:flex;
+    flex-direction:column;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .intern-name{
+    font-weight: 800;
+    color: var(--ink);
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .intern-role{
+    margin: 0;
+    color: var(--brand);
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .intern-snippet{
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+  }
+
+  .intern-meta{
+    margin-top:auto;
+    display:flex;
+    gap:10px;
+    align-items:center;
+    flex-wrap:wrap;
+    padding-top: 6px;
+  }
+
+  .tag{
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(15, 23, 42, .75);
+    background: rgba(15, 23, 42, .06);
+    padding: 5px 10px;
+    border-radius: 999px;
+  }
+
+  /* responsive columns */
+  @media(min-width: 768px){
+    .intern-card{ grid-column: span 6; }
+    .intern-media{ width: 150px; flex-basis:150px; }
+  }
+  @media(min-width: 1200px){
+    .intern-card{ grid-column: span 4; }
+  }
+
+  /* modal */
+  .intern-modal{
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 6, 23, .55);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding: 18px;
+    z-index: 9999;
+  }
+
+  .intern-modal.open{ display:flex; }
+
+  .intern-modal-card{
+    width: min(900px, 95vw);
+    background: white;
+    border-radius: 18px;
+    overflow:hidden;
+    box-shadow: 0 30px 80px rgba(2,6,23,.35);
+    border: 1px solid rgba(255,255,255,.20);
+  }
+
+  .intern-modal-top{
+    display:flex;
+    gap: 16px;
+    padding: 16px;
+    border-bottom: 1px solid rgba(15, 23, 42, .10);
+    align-items:center;
+  }
+
+  .intern-modal-top img{
+    width: 84px;
+    height: 84px;
+    border-radius: 16px;
+    object-fit: cover;
+    background: var(--soft);
+    border: 1px solid rgba(15, 23, 42, .10);
+  }
+
+  .intern-modal-title{
+    margin:0;
+    font-weight: 900;
+    color: var(--ink);
+    font-size: 20px;
+  }
+
+  .intern-modal-role{
+    margin:4px 0 0;
+    color: var(--brand);
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+  .intern-modal-year{
+    margin-left:auto;
+    font-weight: 800;
+    color: rgba(15,23,42,.75);
+    background: rgba(47, 66, 121, .08);
+    border: 1px solid rgba(47, 66, 121, .18);
+    padding: 6px 10px;
+    border-radius: 999px;
+  }
+
+  .intern-modal-body{
+    padding: 16px;
+    color: rgba(15,23,42,.85);
+    line-height: 1.75;
+    font-size: 15px;
+  }
+
+  .intern-modal-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap: 10px;
+    padding: 12px 16px 16px;
+  }
+
+  .btn-closex{
+    border-radius: 12px;
+    border: 1px solid rgba(15, 23, 42, .14);
+    background: white;
+    padding: 10px 12px;
+    font-weight: 800;
+    cursor:pointer;
+  }
+
+  .btn-closex:hover{
+    background: rgba(15, 23, 42, .05);
+  }
+
+  .empty-state{
+    padding: 26px 0 40px;
+    color: var(--muted);
+    text-align:center;
+    display:none;
+  }
+</style>
   <link rel="stylesheet" href="css/header.css">
 </head>
 
@@ -378,580 +681,248 @@
     </div>
     <!--MADE HIDDEN ENDS-->
     <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  START
-  ////////////////////////////////////////////////////////////////////////////////////////// -->
-  <hr class="hrrr">
-  <h1 id="h1d">Joining Hands With College Interns</h1>
-  <hr class="hrrr">
-  <br><br>
-  <div class="tabs">
-    <button class="tablinks" onclick="openTab(event, '2025spring')"id="defaultOpen">2025-Spring</button>
-    <button class="tablinks" onclick="openTab(event, '2024summer')">2024-Summer</button>
-    <button class="tablinks" onclick="openTab(event, '2024spring')">2024-Spring</button>
-    <button class="tablinks" onclick="openTab(event, '2023')">2023-Summer</button>
-    <button class="tablinks" onclick="openTab(event, 'current')">2022-2023</button>
-    <button class="tablinks" onclick="openTab(event, 'pastone')">2021-2022</button>
-    <button class="tablinks" onclick="openTab(event, 'third')">2020-2021</button>
-  </div>
-
-  <!-- Beginning of 2025 Spring page -->
-<div id="2025spring" class="tabcontent">
-  <div class="contain">
-    <!-- Prasamsha Gyenwali -->
-    <div class="imagy">
-      <img class="imgWidBackground" style="width: 275px;" src="intern_images/prasamsha.jpg"  alt="Prasamsha Gyenwali"/>
-      <h1 class="evenboxinner">Prasamsha Gyenwali</h1>
-    </div>
-    <div class="empty"></div>
-    <div class="texty">
-      <!-- Prasamsha's info here -->
-      <hr>
-      <h3>Web Developer</h3>
-      <hr>
-      <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-        Prasamsha is a freshman at Barnard College, majoring in Computer Science and Mathematics. She first joined RICH as a high school CTE intern
-during her junior year, where she contributed to administrative tasks,collaborated with Dr. Sirlin to develop a podcast series, managed Google
-Classrooms, and created two RICH-themed games. Now, as a member of the web development team, she is working to enhance visibility and engagement and leading
-the creation of innovative upgrades to the RICH website. Prasamsha enjoys challenging herself and continuously learning new things in technology. She is
-passionate about using tech to solve real-world problems and is committed to making STEM education more inclusive and accessible.
-
+ <div class="interns-wrap">
+  <div class="container">
+    <section class="interns-hero">
+      <div class="badge">RICH • CUNY Interns</div>
+      <h1 class="interns-title">Joining Hands With College Interns</h1>
+      <p class="interns-sub">
+        Explore cohorts across semesters, see who worked on what, and tap a profile to read their full story.
       </p>
-    </div>
-  </div>
-  <br><br><br><br>
-
-  <div class="contain">
-    <div class="imagyy">
-      <img class="imgWidBackground" style="width: 275px;" src="intern_images/zarif.png" alt="Zarif Islam"/>
-      <h1 class="evenboxinner">Zarif Islam</h1>
-    </div>
-    <div class="empty"></div>
-    <div class="texty">
-      <!-- Zarif's info here -->
-      <hr>
-      <h3>Front-End Developer</h3>
-      <hr>
-      <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-        During spring semester 25, Zarif Islam a Computer Science major at Queens College, volunteered as a Web Developer Intern 
-        at the RICH Organization.  Zarif contributed to tech projects, offering technical and creative solutions. He assisted the 
-        tech team in fixing bugs on the website to improve user experience. He also spearheaded videography projects, interviewed 
-        board members and former interns, and edited and uploaded the final videos to the organization’s website and social media 
-        platforms.  With a passion for storytelling and problem-solving, Zarif brings a unique blend of creativity and tech skills 
-        to the IT projects he works on.
-      </p>
-    </div>
-  </div>
-  <br><br><br><br>
-
-  <div class="contain">
-    <div class="imagy">
-      <img class="imgWidBackground" style="width: 275px;" src="intern_images/siera.png" alt="Siera Martinez"/>
-      <h1 class="evenboxinner">Siera Martinez</h1>
-    </div>
-    <div class="empty"></div>
-    <div class="texty">
-      <!-- Siera's info here -->
-      <hr>
-      <h3>Print Media </h3>
-      <hr>
-      <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-        Siera Martinez is pursuing her degree with a major in Sociology and double minoring in Graphic Design and Honors in the 
-        Social Sciences. She is passionate about designing spaces and materials that encourage personal and community development 
-        to help people reach their true potential. As a RICH intern, she worked with the tech team to provide functional and aesthetic
-        updates for the organization’s website redesign project. Siera led the creative design efforts for the digital onboarding
-        process for interns. She also worked closely with the executive director on the organization’s three-year strategic plan. 
-      </p>
-    </div>
-  </div>
-  <br><br><br><br>
+    </section>
   </div>
 
-<!-- Beginning of 2024 Spring page-->
-<div id="2024spring" class="tabcontent">
-  <div class="contain">
-    <div class="imagy">
-      <img class="imgWidBackground" style="width: 275px;" src="intern_images/rifah.jpeg" />
-      <h1 class="evenboxinner">Rifah Thakur</h1>
-    </div>
-    <div class="empty"></div>
-    <div class="texty">
-      <hr>
-      <h3>Research Assistant</h3>
-      <hr>
-      <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-        Rifah Thakur is currently pursuing a dual major in Sociology and Psychology at City College of New York. She loves studying the intricacies of 
-        human behavior at both the individual and community levels. Rifah is driven to become a Therapist with the goal to guide and support individuals 
-        who struggle with mental health. Known for her empathetic and organizational skills, she closely resonates with the RICH Principle
-        of “I am Considerate” and drives herself to improve her interpersonal relationships to foster positive change within her community. Rifah's time 
-        at RICH helped her cultivate a better understanding of the importance of how to carry out research through developing relationships with her team 
-        members while also contributing to the <a href="reach-for-success.html" style="color:blue;">"RICH Towards The Future"</a> project.
-      </p>
+  <div class="interns-controls">
+    <div class="container">
+      <div class="row" style="row-gap: 12px;">
+        <div class="col-lg-8">
+          <div class="year-pills" id="yearPills">
+            <!-- pills injected by JS -->
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <input id="internSearch" class="intern-search" type="text" placeholder="Search by name, role, school, keywords..." />
+        </div>
+      </div>
     </div>
   </div>
-  <br><br><br><br>
 
-  <div class="contain">
-    <div class="imagyy">
-      <img class="imgWidBackground" style="width: 275px;" src="intern_images/joel2.JPG" />
-      <h1 class="evenboxinner">Joel Vasquez</h1>
-    </div>
-    <div class="empty"></div>
-    <div class="texty">
-      <hr>
-      <h3>Web Developer</h3>
-      <hr>
-      <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-        Joel Vasquez is studying for a degree in Computer Science at Baruch College and works as a web developer at RICH. He aspires to have a career in Data Science 
-        but is also interested in Machine Learning and AI. His passion for technology stems from his love for video games. 
-        His enthusiasm for video games drove Joel to study Computer Repair in high school where he built computers to further share his interest with his community.
-        Studying Computer Science has also brought him closer to the software field and has motivated him to learn more about how computers function both 
-        hardware and software-wise. At RICH, Joel successfully helped to launch the <a href="reach-for-success.html" style="color:blue;">"RICH Towards The Future"</a> project while at the same time collecting data and 
-        feedback to further enhance its effectiveness. He also created the search functionality for the RICH website utilizing his knowledge in the 
-        languages of Computer Science including HTML, CSS, and JavaScript.
-      </p>
+  <div class="container">
+    <div id="internGrid" class="intern-grid"></div>
+    <div id="emptyState" class="empty-state">
+      Nothing matched that search. Try different keywords.
     </div>
   </div>
-  <br><br><br><br>
 </div>
 
-<!-- Beginning of 2024 Summer page -->
-<div id="2024summer" class="tabcontent">
-  <div class="contain">
-    <!-- Hashir Ali -->
-    <div class="imagy">
-      <img class="imgWidBackground" style="width: 275px;" src="intern_images/hashir.jpg" />
-      <h1 class="evenboxinner">Hashir Ali</h1>
+<!-- Modal -->
+<div id="internModal" class="intern-modal" aria-hidden="true">
+  <div class="intern-modal-card" role="dialog" aria-modal="true">
+    <div class="intern-modal-top">
+      <img id="mImg" src="" alt="" />
+      <div>
+        <h3 id="mName" class="intern-modal-title"></h3>
+        <p id="mRole" class="intern-modal-role"></p>
+      </div>
+      <div id="mYear" class="intern-modal-year"></div>
     </div>
-    <div class="empty"></div>
-    <div class="texty">
-      <hr>
-      <h3>Web Developer</h3>
-      <hr>
-      <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-        Hashir Ali is pursuing a degree in Computer Science and works as a web developer at RICH. He is passionate about web development and strives to create
-        user-friendly, dynamic websites. His journey in technology began with a fascination for coding and problem-solving, which led him to explore various
-        programming languages and technologies. At RICH, Hashir has contributed to enhancing the website's functionality and user experience, implementing 
-        new features and optimizing existing ones. His commitment to continuous learning and innovation drives him to stay updated with the latest industry trends.
-        Hashir embodies the RICH Principle of "I am Motivated" and is dedicated to making a positive impact through his technical skills and creativity.
-      </p>
+    <div id="mBio" class="intern-modal-body"></div>
+    <div class="intern-modal-actions">
+      <button class="btn-closex" id="mCloseBtn">Close</button>
     </div>
   </div>
-  <br><br><br><br>
-
-  <div class="contain">
-    <!-- Nuzhat Chowdhury -->
-    <div class="imagyy">
-      <img class="imgWidBackground" style="width: 275px;" src="intern_images/image0.jpeg" />
-      <h1 class="evenboxinner">Nuzhat Chowdhury</h1>
-    </div>
-    <div class="empty"></div>
-    <div class="texty">
-      <hr>
-      <h3>Project Manager</h3>
-      <hr>
-      <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-        Nuzhat Chowdhury is currently pursuing a Bachelor of Science degree in Physics at CUNY Hunter College. She aspires to earn a Ph.D. in Physics and work in the Astrophysics field. Nuzhat is committed to her academic and professional endeavors, with a well known work ethic. She has a passion for her studies and desires, in hope of making a positive impact in many communities. Nuzhat is a collaborative team player, skilled in fostering effective communication and coordination among her colleagues. During the summer of 2024, Nuzhat's creative, interpersonal, and organizational abilities were an asset to the RICH CUNY Interns team. She gained skills in web development, design, and research through the team's ambitious, “RICH Spaceship”project, a game designed from her inspirations and love of outer space. Its purpose is to attract students to the RICH Google Classroom. In her time here they were able to implement phase one of the project. 
-
-
-      </p>
-    </div>
-  </div>
-  <br><br><br><br>
-
-  <div class="contain">
-    <!-- Yussuf Sakoor -->
-    <div class="imagy">
-      <img class="imgWidBackground" style="width: 275px;" src="intern_images/yussef.jpg" />
-      <h1 class="evenboxinner">Yussuf Sakoor</h1>
-    </div>
-    <div class="empty"></div>
-    <div class="texty">
-      <hr>
-      <h3> Marketing Assistant intern</h3>
-      <hr>
-      <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-        Yussuf Sakoor is majoring in Psychology at Queens College CUNY. As a RICH intern, use psychology interests describing human behavior to research and create marketing videos for the RICH organization. Great team player, develops collaborative relationships with his colleagues. While also helping to contribute to the "RICH Towards The Future" project, he embodies the "I am responsible" principle of RICH. 
-      </p>
-    </div>
-  </div>
-  <br><br><br><br>
 </div>
 
-<!-- The end of 2024 - 2025 Intern Page -->
-    
-    <!-- the beginning of 2023 - 2024 page -->
-    <div id="2023" class="tabcontent">
-      <div class="contain">
-        <div class="imagy">
-          <img class="imgWidBackground" style=" width: 275px; " src="intern_images/shaine.jpeg" />
-          <h1 class="evenboxinner">Shaine Lomenario</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Web Developer</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Shaine Lomenario is currently a computer science major at CUNY Queens College.
-            He is very passionate about technology and wants to pursue a software engineer
-            career at Google or Spotify. His responsibilities at RICH include creating/designing
-            the layout and landing for the “new vision” on the RICH homepage. Shaine is very
-            outgoing and friendly. He can always be counted on to be diligent in his work. He
-            incorporates every RICH Principle into his everyday life. He maintains optimism and
-            is constantly seeking new opportunities to improve his well-being. Shaine is launching
-            the “new vision” for RICH to encourage adults aspiring to make a difference and
-            looking to attend higher ed and possibly CUNY.
-          </p>
-        </div>
-      </div>
-      <br><br><br><br>
-      <div class="contain">
-        <div class="imagyy">
-          <img class="imgWidBackground" style=" width: 280px" src="intern_images/guangqing.jpeg" />
-          <h1 class="evenboxinner">Guangqing Yuan</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Web Developer</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Guangqing Yuan attends Queens College studying computer science, and plans to
-            become a software developer. He has been fascinated by software, computers, and
-            technology since a young age. Known as a flexible person that is open to new
-            experiences, his work as RICH's web developer is focused on designing a web
-            landing page for parents and educators. The website helpingurbankidsonline.com.
-            Guangqing is known to actively take responsibility for his actions and decisions, and
-            is a thoughtful team member. He actively listens to others' opinions and strives to
-            understand different perspectives when implementing his website designs.
-          </p>
-        </div>
-      </div>
-      <br><br><br>
+<script>
+  // ====== 1) DATA (use your real content here) ======
+  // Tip: keep bios exactly as-is; this layout will make them look better.
+  const interns = [
+    {
+      year: "2025-Spring",
+      name: "Prasamsha Gyenwali",
+      role: "Web Developer",
+      img: "intern_images/prasamsha.jpg",
+      tags: ["Computer Science", "Barnard"],
+      bio: `Prasamsha is a freshman at Barnard College, majoring in Computer Science and Mathematics. She first joined RICH as a high school CTE intern during her junior year, where she contributed to administrative tasks,collaborated with Dr. Sirlin to develop a podcast series, managed Google Classrooms, and created two RICH-themed games. Now, as a member of the web development team, she is working to enhance visibility and engagement and leading the creation of innovative upgrades to the RICH website. Prasamsha enjoys challenging herself and continuously learning new things in technology. She is passionate about using tech to solve real-world problems and is committed to making STEM education more inclusive and accessible.`
+    },
+    {
+      year: "2025-Spring",
+      name: "Zarif Islam",
+      role: "Front-End Developer",
+      img: "intern_images/zarif.png",
+      tags: ["Queens College", "Storytelling"],
+      bio: `Zarif Islam, a Computer Science student at CUNY Queens College, returned to RICH as a Team Lead and Software Engineering Intern after volunteering with the organization during the spring term 2025. In his role as project lead, he coordinates a four-person development team, overseeing deliverables for all project milestones, utilizing the centralized GitHub deployment workflow management platform. Mr. Islam architected RICH's flagship full-stack educational platform utilizing Next.js, React, and PostgreSQL, and collaborated with a Bloomberg Senior ML Engineer on database design and Google Gemini AI integration. Zarif spearheaded the redesign of the RICH organization’s visual identity, including the new logo and brand design. He presented the execution of his projects to RICH’s stakeholders: a digital data researcher, community leaders, and the RICH board director. His ongoing commitment to RICH's mission exemplifies both technical leadership and a dedication to accessible education technology.`
+    },
+    {
+      year: "2025-Spring",
+      name: "Siera Martinez",
+      role: "Print Media",
+      img: "intern_images/siera.png",
+      tags: ["Sociology", "Graphic Design"],
+      bio: `Siera Martinez is pursuing her degree with a major in Sociology and double minoring in Graphic Design and Honors in the Social Sciences. She is passionate about designing spaces and materials that encourage personal and community development to help people reach their true potential. As a RICH intern, she worked with the tech team to provide functional and aesthetic updates for the organization’s website redesign project. Siera led the creative design efforts for the digital onboarding process for interns. She also worked closely with the executive director on the organization’s three-year strategic plan.`
+    },
 
-      <div class="contain">
-        <div class="imagy">
-          <img class="imgWidBackground" style=" width: 275px" src="intern_images/maliha.jpeg" />
-          <h1 class="evenboxinner">Maliha Tasnim</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Web Developer</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Maliha Tasnim is a rising sophomore at CUNY Hunter College, studying computer
-            science. She aims to become a software engineer. Apart from her passion for
-            computer science, she is also deeply interested in drawing and reading. Described as a
-            highly motivated and goal-oriented individual, Maliha excels as a web developer and
-            has exceptional organizational skills. She embraces the RICH Principle "I am
-            responsible for my behavior", and holds herself accountable for completing tasks
-            efficiently. Maliha's focus on details quickly earned her recognition from the RICH 
-        organization for her digital savvy personality.
-        </div>
-      </div>
-      <br><br><br><br><br><br><br><br><br>
+    {
+      year: "2024-Summer",
+      name: "Hashir Ali",
+      role: "Web Developer",
+      img: "intern_images/hashir.jpg",
+      tags: ["Web Dev", "Motivated"],
+      bio: `Hashir Ali is pursuing a degree in Computer Science and works as a web developer at RICH. He is passionate about web development and strives to create user-friendly, dynamic websites. His journey in technology began with a fascination for coding and problem-solving, which led him to explore various programming languages and technologies. At RICH, Hashir has contributed to enhancing the website's functionality and user experience, implementing new features and optimizing existing ones. His commitment to continuous learning and innovation drives him to stay updated with the latest industry trends. Hashir embodies the RICH Principle of "I am Motivated" and is dedicated to making a positive impact through his technical skills and creativity.`
+    },
+    {
+      year: "2024-Summer",
+      name: "Nuzhat Chowdhury",
+      role: "Project Manager",
+      img: "intern_images/image0.jpeg",
+      tags: ["Hunter", "Physics"],
+      bio: `Nuzhat Chowdhury is currently pursuing a Bachelor of Science degree in Physics at CUNY Hunter College. She aspires to earn a Ph.D. in Physics and work in the Astrophysics field. Nuzhat is committed to her academic and professional endeavors, with a well known work ethic. She has a passion for her studies and desires, in hope of making a positive impact in many communities. Nuzhat is a collaborative team player, skilled in fostering effective communication and coordination among her colleagues. During the summer of 2024, Nuzhat's creative, interpersonal, and organizational abilities were an asset to the RICH CUNY Interns team. She gained skills in web development, design, and research through the team's ambitious, “RICH Spaceship”project, a game designed from her inspirations and love of outer space. Its purpose is to attract students to the RICH Google Classroom. In her time here they were able to implement phase one of the project.`
+    },
+    {
+      year: "2024-Summer",
+      name: "Yussuf Sakoor",
+      role: "Marketing Assistant Intern",
+      img: "intern_images/yussef.jpg",
+      tags: ["Queens College", "Psychology"],
+      bio: `Yussuf Sakoor is majoring in Psychology at Queens College CUNY. As a RICH intern, use psychology interests describing human behavior to research and create marketing videos for the RICH organization. Great team player, develops collaborative relationships with his colleagues. While also helping to contribute to the "RICH Towards The Future" project, he embodies the "I am responsible" principle of RICH.`
+    },
 
-    </div>
-    <!--The end of 2023 - 2024 page -->
-    <!--The beginning of 2022 - 2023 page-->
+    {
+      year: "2024-Spring",
+      name: "Rifah Thakur",
+      role: "Research Assistant",
+      img: "intern_images/rifah.jpeg",
+      tags: ["CCNY", "Sociology"],
+      bio: `Rifah Thakur is currently pursuing a dual major in Sociology and Psychology at City College of New York. She loves studying the intricacies of human behavior at both the individual and community levels. Rifah is driven to become a Therapist with the goal to guide and support individuals who struggle with mental health. Known for her empathetic and organizational skills, she closely resonates with the RICH Principle of “I am Considerate” and drives herself to improve her interpersonal relationships to foster positive change within her community. Rifah's time at RICH helped her cultivate a better understanding of the importance of how to carry out research through developing relationships with her team members while also contributing to the "RICH Towards The Future" project.`
+    },
+    {
+      year: "2024-Spring",
+      name: "Joel Vasquez",
+      role: "Web Developer",
+      img: "intern_images/joel2.JPG",
+      tags: ["Baruch", "Data Science"],
+      bio: `Joel Vasquez is studying for a degree in Computer Science at Baruch College and works as a web developer at RICH. He aspires to have a career in Data Science but is also interested in Machine Learning and AI. His passion for technology stems from his love for video games. His enthusiasm for video games drove Joel to study Computer Repair in high school where he built computers to further share his interest with his community. Studying Computer Science has also brought him closer to the software field and has motivated him to learn more about how computers function both hardware and software-wise. At RICH, Joel successfully helped to launch the "RICH Towards The Future" project while at the same time collecting data and feedback to further enhance its effectiveness. He also created the search functionality for the RICH website utilizing his knowledge in the languages of Computer Science including HTML, CSS, and JavaScript.`
+    },
+  ];
 
-    <div id="current" class="tabcontent">
-      <div class="contain">
-        <div class="imagy">
-          <img class="imgWidBackground" style=" width: 275px; height: 400px; object-fit: cover;"
-            src="intern_images/sadiagrad.jpeg" />
+  // ====== 2) UI STATE ======
+  const grid = document.getElementById("internGrid");
+  const pillsWrap = document.getElementById("yearPills");
+  const searchInput = document.getElementById("internSearch");
+  const emptyState = document.getElementById("emptyState");
 
-          <h1 class="evenboxinner">Sadia Ishak</h1>
+  const modal = document.getElementById("internModal");
+  const mImg = document.getElementById("mImg");
+  const mName = document.getElementById("mName");
+  const mRole = document.getElementById("mRole");
+  const mYear = document.getElementById("mYear");
+  const mBio = document.getElementById("mBio");
+  const mCloseBtn = document.getElementById("mCloseBtn");
 
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Project Manager for RICH Website</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-          <p>Congratulations to our Queens College Intern, Sadia Ishak, on her graduation and
-            remarkable accomplishments! Sadia, your work ethic, vision, creative talent, and management of the RICH
-            organization’s website development team are extraordinary! We at RICH wish you the very best and I look
-            forward to our continued relationship and partnership!” - Jacqueline Dawson, Ph.D. (December 2022) </p>
-        </div>
-      </div>
+  const years = ["All", ...Array.from(new Set(interns.map(i => i.year)))];
+  let activeYear = "All";
+  let searchTerm = "";
 
-      <br><br><br><br>
+  // ====== 3) RENDER ======
+  function renderPills(){
+    pillsWrap.innerHTML = years.map(y => `
+      <button class="year-pill ${y === activeYear ? "active" : ""}" data-year="${y}">
+        ${y}
+      </button>
+    `).join("");
 
-      <div class="contain">
-        <div class="imagyy">
-          <img class="imgWidBackground" style=" width: 250px; " src="intern_images/janeen.png" />
-          <h1 class="evenboxinner">Janeen Hyatt</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Media Communications Intern</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Janeen Hyatt, a junior majoring in Forensic Psychology and minoring in Anthropology at John Jay College of
-            Criminal Justice, is a Media Communications intern at RICH. She managed the various RICH social media
-            platforms during the 30th-anniversary campaign and produced, hosted, and edited the three 30th-anniversary
-            podcast videos promoting how students and parents can use the RICH guiding principles to practice and
-            encourage self-affirming behaviors for personal and academic success. When Janeen is not interning at RICH
-            or dedicating time to her studies, she attends music and performing arts productions, practices digital
-            photography and graphic design, writes poems, and spends quality time with her family and friends. With her
-            passion for advocating for individuals with limited access to mental healthcare due to their culture, race,
-            ethnicity, gender, and sexual orientation, Janeen aspires to be a Clinical Psychologist and Certified
-            Behavioral Analyst. </p>
-        </div>
-      </div>
-      <br><br><br><br>
+    pillsWrap.querySelectorAll(".year-pill").forEach(btn => {
+      btn.addEventListener("click", () => {
+        activeYear = btn.dataset.year;
+        renderPills();
+        renderGrid();
+      });
+    });
+  }
 
-      <div class="contain">
-        <div class="imagy">
-          <img class="imgWidBackground" style=" width: 275px; " src="intern_images/angela.png" />
-          <h1 class="evenboxinner">Angela Haxhari</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Media Communications Intern</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Angela is a sophomore at CUNY College of Staten Island pursuing a degree in Social Work. She is a team
-            member on the RICH Social Media Platforms who works on social media campaign designs which includes the RICH
-            Affirmation Project. Using the RICH Reach for Success Program 4 Guiding Principles, she is formulating
-            affirmations for the social media audience. She is a diligent student and worker who likes to get involved
-            in community events. Angela’s dream job is becoming a school social worker since she is passionate about
-            working with others and helping them flourish. RICH has helped her grow and exemplify these traits by
-            plunging into the social worker mindset to develop campaign messages and focus on the school, community, and
-            family audience. </p>
-        </div>
-      </div>
-      <br><br><br>
+  function makeSnippet(text){
+    return (text || "").replace(/\s+/g, " ").trim();
+  }
 
+  function renderGrid(){
+    const filtered = interns.filter(i => {
+      const inYear = activeYear === "All" || i.year === activeYear;
+      const hay = `${i.name} ${i.role} ${i.year} ${(i.tags||[]).join(" ")} ${i.bio}`.toLowerCase();
+      const inSearch = !searchTerm || hay.includes(searchTerm);
+      return inYear && inSearch;
+    });
 
-      <div class="contain">
-        <div class="imagyy">
-          <img class="imgWidBackground" style=" width: 250px; " src="intern_images/olha.png" />
-          <h1 class="evenboxinner">Olha Kravtsova</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Web Designer</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Olha is a freshman at New York City College of Technology, working towards earning a bachelor's degree in
-            computer systems. She is responsible for updating the website, including pages such as "CUNY Interns" and
-            the "30th Anniversary". Olha aspires to become a web designer and branch out into full-time freelancing. She
-            has been interested in this field since high school and is taking the next steps to achieve her goals. The
-            RICH Organization has been helpful in increasing Olha’s experience in the field of her interest.</p>
-        </div>
-      </div>
-      <br><br><br><br><br><br><br><br><br>
+    emptyState.style.display = filtered.length ? "none" : "block";
 
-    </div>
+    grid.innerHTML = filtered.map((i, idx) => `
+      <article class="intern-card" data-idx="${interns.indexOf(i)}" tabindex="0">
+        <div class="intern-media">
+          <img src="${i.img}" alt="${i.name}">
+        </div>
+        <div class="intern-body">
+          <p class="intern-role">${i.role}</p>
+          <h3 class="intern-name">${i.name}</h3>
+          <p class="intern-snippet">${makeSnippet(i.bio)}</p>
+          <div class="intern-meta">
+            <span class="tag">${i.year}</span>
+            ${(i.tags || []).slice(0,2).map(t => `<span class="tag">${t}</span>`).join("")}
+          </div>
+        </div>
+      </article>
+    `).join("");
 
+    grid.querySelectorAll(".intern-card").forEach(card => {
+      const open = () => openModal(parseInt(card.dataset.idx, 10));
+      card.addEventListener("click", open);
+      card.addEventListener("keydown", (e) => {
+        if(e.key === "Enter" || e.key === " ") open();
+      });
+    });
+  }
 
-    <!--The end of 2022 - 2023 page-->
+  // ====== 4) MODAL ======
+  function openModal(idx){
+    const i = interns[idx];
+    if(!i) return;
 
+    mImg.src = i.img;
+    mImg.alt = i.name;
+    mName.textContent = i.name;
+    mRole.textContent = i.role;
+    mYear.textContent = i.year;
 
-    <div id="pastone" class="tabcontent">
-      <div class="contain">
-        <div class="imagy">
-          <img class="imgWidBackground" style=" width: 275px; " src="intern_images/image1.png" />
+    // preserve line breaks if you add them later
+    mBio.textContent = i.bio;
 
-          <h1 class="evenboxinner">Sadia Ishak</h1>
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
 
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Web-Based Project Manager</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Sadia is currently a senior who came on board with the RICH organization in her freshman year at Queens
-            College. She is majoring in Computer Science with a minor in Business Liberal Arts. Working as the RICH
-            Web-development Project Manager, she oversees all creative content designs for the RICH website and its
-            Google Classroom platform. Sadia is the lead mentor who supervises DOE remote interns with the RICH online
-            training project. RICH has
-            allowed Sadia to execute valuable tech skills for the organization’s web-development work-space. She was the
-            2020 recipient of the Dr. Félix V. Matos Rodríguez Internship Fund. Sadia's dream job is to be the CEO of
-            Google.</p>
-        </div>
-      </div>
+  function closeModal(){
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
 
-      <br><br><br><br>
+  mCloseBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    if(e.target === modal) closeModal();
+  });
+  window.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && modal.classList.contains("open")) closeModal();
+  });
 
-      <div class="contain">
-        <div class="imagyy">
-          <img class="imgWidBackground" style=" width: 250px; " src="intern_images/image5.jpg" />
-          <h1 class="evenboxinner">Nasir Freeman</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Web Developer</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Nasir is an undergraduate at Queens College, majoring in Computer Science (BA). He is the backend-web
-            developer intern for the RICH organization who oversees the organization’s server-side web application and
-            works with the
-            front-end developers on implementing APIs for the website. He collaborates with the web-development team to
-            ensure the seamless integration of all applications and databases. Nasir's hobby is designing websites and
-            practicing his web
-            development skills. He’s been busy building basic websites since the age seven and his dream job is to
-            become a software engineer in the game development field. </p>
-        </div>
-      </div>
-      <br><br><br><br>
+  // ====== 5) SEARCH ======
+  searchInput.addEventListener("input", () => {
+    searchTerm = searchInput.value.toLowerCase().trim();
+    renderGrid();
+  });
 
-      <div class="contain">
-        <div class="imagy">
-          <img class="imgWidBackground" style=" width: 275px; " src="intern_images/image7.jpg" />
-          <h1 class="evenboxinner">Shriyansh Tripathi</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Web Developer</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Shriyansh is a sophomore at CUNY Queens college majoring in Computer Science and minoring in Mathematics.
-            He interned at RICH back in 2020 where he created the "Snacking for Smartness" project for middle school
-            students. He has experience in front-end and back-end web development, along with knowledge of database
-            servers. He is an excellent problem solver who takes the initiative and ownership of projects and
-            proactively resolves issues. Furthermore, he also has hands-on experience in Cybersecurity and Cloud
-            technologies such as Amazon Web Services (AWS). He has a passion for tutoring in mathematics and computer
-            science and has been doing freelancing work for the past 2 years. He aspires to become a software engineer
-            at a FAANG company.</p>
-        </div>
-      </div>
-      <br><br><br><br>
-    </div>
-
-    <div id="third" class="tabcontent">
-      <div class="contain">
-        <div class="imagy">
-          <img class="imgWidBackground" style=" width: 275px; " src="intern_images/image1.png" />
-
-          <h1 class="evenboxinner">Sadia Ishak</h1>
-
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Web-Based Project Manager</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Sadia is currently a junior who came on board with the RICH organization in her freshman year at Queens
-            College. She is majoring in Computer Science with a minor in Business Liberal Arts. Working as the RICH
-            Web-development Project Manager, she oversees all creative content designs for the RICH website and its
-            Google Classroom platform. Sadia is the lead mentor who supervises DOE remote interns with the RICH online
-            training project. RICH has
-            allowed Sadia to execute valuable tech skills for the organization’s web-development work-space. She was the
-            2020 recipient of the Dr. Félix V. Matos Rodríguez Internship Fund. Sadia's dream job is to be the CEO of
-            Google.</p>
-        </div>
-      </div>
-
-      <br><br><br><br><br>
-      <div class="contain">
-        <div class="imagyy">
-          <img class="imgWidBackground" style=" width: 275px; " src="intern_images/image2.jpg" />
-          <h1 class="evenboxinner">Lisa Zheng</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Lead Social Media Intern</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Lisa is a senior attending Queens College where she is majoring in Media Studies with a minor in Business
-            and Liberal Arts. She is the lead social media intern at RICH where she interviews RICH graduates, guides
-            RICH's high school
-            interns in accomplishing their internship goals, and creates social media campaigns that advertise the
-            success of these efforts. One of the campaigns that she worked on, <a class="hyperr"
-              href="campaign1.html">"Then & Now"</a>, is featured
-            on the
-            RICH website and social media pages. She wants to be an experiential event manager or a brand manager in the
-            future. RICH has made Lisa realize how important it is for youth to be self-aware and know that they
-            matter in order to achieve their life and school goals.</p>
-        </div>
-      </div>
-      <br><br><br><br>
-      <div class="contain">
-        <div class="imagy">
-          <img class="imgWidBackground" style=" width: 250px; " src="intern_images/image5.jpg" />
-          <h1 class="evenboxinner">Nasir Freeman</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Web Developer</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Nasir is a junior at Queens College, majoring in Computer Science (BA). He is the backend-web developer
-            intern for the RICH organization who oversees the organization’s server-side web application and works with
-            the
-            front-end developers on implementing APIs for the website. He collaborates with the web-development team to
-            ensure the seamless integration of all applications and databases. Nasir's hobby is designing websites and
-            practicing his web
-            development skills. He’s been busy building basic websites since the age seven and his dream job is to
-            become a software engineer in the game development field. </p>
-        </div>
-      </div>
-      <br><br><br>
-      <div class="contain">
-        <div class="imagyy">
-          <img class="imgWidBackground" style=" width: 275px; " src="intern_images/image4.jpg" />
-          <h1 class="evenboxinner">Hannah Fischbein</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Social Media Intern</h3>
-          <hr>
-          <p style="word-spacing: normal; word-break: break-word; hyphens: auto; font-size: 15px; line-height: 1.5;">
-            Hannah is a Freshman at Queens College, majoring in Advertising and minoring in Business and Liberal Arts.
-            She is the lead campaign builder at RICH, where she works with the Product Manager to shape the direction of
-            social media. Hannah crafts creative ideas and develops,
-            produces, and manages social media and ad campaigns, such as the <a class="hyperr"
-              href="campaign1.html">"Then & Now"</a> campaign, <a class="hyperr"
-              href="https://www.facebook.com/richincstudents/photos/a.466456797096914/1026866031055985/">Black History
-              Month</a>, and the Reach for Success podcast publicity.
-            RICH has given Hannah experience with the ins and outs of the social media marketing industry and provided
-            the invaluable opportunity to be a lead mentor for DOE interns. She plans to expand her career by entering
-            other areas of marketing, such as product and brand marketing.</p>
-        </div>
-      </div>
-      <br><br><br><br>
-      <div class="contain">
-        <div class="imagy">
-          <img class="imgWidBackground" style=" width: 275px; " src="intern_images/image3.jpg" />
-          <h1 class="evenboxinner">Hassan Amjad</h1>
-        </div>
-        <div class=empty></div>
-        <div class="texty">
-          <hr>
-          <h3>Web Developer</h3>
-          <hr>
-          <p style="  text-align: justify;">Hassan is currently a junior at Queens College who is pursuing a Bachelors
-            in Computer Science. He is passionate about pursuing a career in web development and has experienced various
-            internships in this
-            field, as well as participated in
-            several projects and hackathons. He is currently working on expanding his web and iOS development skills.
-            RICH has given him a chance to implement and expand his front-end web-development skills in a remote
-            work-based environment. Hassan
-            also worked with the RICH back-end developer to implement the <a class="hyperr" href="campaign1.html">"Then
-              & Now"</a> webpage. His vision is to build his own startup one day.</p>
-        </div>
-      </div>
-      <br><br><br><br><br><br><br><br>
-    </div>
-
-    <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////
-END
-////////////////////////////////////////////////////////////////////////////////////////// -->
+  // init
+  renderPills();
+  renderGrid();
+</script>
 
     <p style="color: #969ba3; text-align:center; padding-top: 10px;">Contributions deductible under 501 (c) (3) approved
       by IRS. </p>
@@ -995,7 +966,7 @@ END
   <script src="../js/bootstrap-datepicker.min.js"></script>
   <script src="../js/aos.js"></script>
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     document.getElementById("defaultOpen").click();
 
     function openTab(evt, tabName) {
@@ -1011,13 +982,13 @@ END
       document.getElementById(tabName).style.display = "block";
       evt.currentTarget.className += " active";
     }
-  </script>
+  </script> -->
 
   <script src="../js/mediaelement-and-player.min.js"></script>
 
   <script src="../js/main.js"></script>
 
-  <script>
+  <!-- <script>
     ////
 
     ///
@@ -1107,11 +1078,11 @@ END
       xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhttp.send(params);
     }
-  </script>
+  </script> -->
 
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
-  <script>
+  <!-- <script>
     var quill = new Quill('#editor', {
       theme: 'snow'
     });
@@ -1197,7 +1168,7 @@ END
       xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhttp.send(params);
     }
-  </script>
+  </script> -->
 
   <script src="js/header.js"></script>
 </body>
