@@ -70,11 +70,27 @@ function initMobileMenu() {
 ----------------------------------- */
 function loadHeader() {
   return fetch("header.html")
-    .then(res => res.text())
+    .then(res => {
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      return res.text();
+    })
     .then(html => {
-      document.getElementById("header-container").outerHTML = html;
-      initHeaderScroll();
-      initMobileMenu();
+      const container = document.getElementById("header-container");
+      if (container) {
+        container.outerHTML = html;
+        initHeaderScroll();
+        initMobileMenu();
+      }
+    })
+    .catch(error => {
+      console.error("Error loading header:", error);
+      // Don't break the page if header fails to load
+      const container = document.getElementById("header-container");
+      if (container) {
+        container.innerHTML = "<p>Navigation unavailable</p>";
+      }
     });
 }
 

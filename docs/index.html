@@ -1606,6 +1606,11 @@
     }
 
     function incrementResult(gameResult) {
+      // Disabled for GitHub Pages - PHP not supported
+      console.log("Game result tracking disabled on GitHub Pages:", gameResult);
+      return;
+      
+      /* Original code commented out for static hosting
       mode = "incrementResult";
 
       var xhttp = new XMLHttpRequest();
@@ -1615,9 +1620,15 @@
       xhttp.open("POST", url, false);
       xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhttp.send(params);
+      */
     }
 
     function sendMail() {
+      // Disabled for GitHub Pages - PHP not supported
+      alert("Contact form is disabled on GitHub Pages. Please use a contact form service or email directly.");
+      return;
+      
+      /* Original code commented out for static hosting
       mode = "sendMail";
 
       var senderName = document.getElementById("senderName").value;
@@ -1643,6 +1654,7 @@
       document.getElementById("senderEmail").value = "";
       document.getElementById("subject").value = "";
       document.getElementById("message").value = "";
+      */
     }
 
     window.onscroll = function () {
@@ -1673,8 +1685,8 @@
       }
     });
 
-    var userInfo;
-    getUserInfo();
+    var userInfo = ""; // Initialize for static hosting (GitHub Pages)
+    // getUserInfo(); // Disabled for GitHub Pages - PHP not supported
 
     var Answers = [];
 
