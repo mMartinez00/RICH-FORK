@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
   <link rel="stylesheet" href="css/animate.css">
-  <!-- <link rel="stylesheet" href="css/bot.css"> -->
+  <link rel="stylesheet" href="css/bot.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
 
@@ -28,7 +28,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+  
 
   <style>
     .top {
@@ -377,39 +377,15 @@
       }
     }
     
-    /* .search-bar{ 
+    .search-bar{ 
       margin-left: 1030px;
       padding: 5px;
       border: 1px solid #ccc;
       border-radius:  4 px;
-    } */
-
-   /* Container for the search elements */
-   .search-container {
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-    }
-    .search-bar {
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      width: 250px;
-    }
-    .search-button {
-      padding: 6px 10px;
-      border: 1px solid #289b2e;
-      border-radius: 0 4px 4px 0;
-      background-color: #dae4da;
-      color: rgb(18, 7, 7);
-      cursor: pointer;
-      margin-left: -5px;
-    }
-    .search-button:hover {
-        background-color: #218825;
     }
 
-    /* .search{ 
+
+    .search{ 
 
       padding-top: 5px ;
       padding-bottom: 5px ;
@@ -427,311 +403,21 @@
       cursor: pointer;
 
       margin-left: -5px ;
-} 
- */
+}
 
 
-      .search-button:hover {
-        background-color: #0056b3;
-      }
 
-      .highlight {
-        background-color: yellow;
-      } 
-      .social-sidebar {
-            position: fixed; /* This is the key property that makes it "stick" */
-            top: 50%; /* Positions it vertically in the middle of the screen */
-            left: 50px; /* Positions it from the left edge of the screen */
-            transform: translateY(-50%); /* This perfectly centers it vertically */
-            z-index: 1000; /* Ensures it stays on top of other page content */
-            
-            display: flex;
-            flex-direction: column; /* Stacks the icons on top of each other */
-            gap: 1px; /* Adds space between the icons */
-            
-            background-color: #0e0101e6;
-            padding: 15px 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(232, 226, 226, 0.828);
-            margin-top: 110px;
-        }
+.search-button:hover {
+  background-color: #0056b3;
+}
 
-        /* Styling for the individual icon links */
-        .social-sidebar a {
-            color: #fff5f5; /* Icon color */
-            font-size: 24px; /* Icon size */
-            transition: transform 0.2s ease-in-out, color 0.2s;
-        }
-
-        /* Adds a nice effect when you hover over the icons */
-        .social-sidebar a:hover {
-            color: #007bff; /* Change color on hover */
-            transform: scale(1.2); /* Make the icon slightly larger */
-        }
-
-        /* This hides the sidebar on smaller screens (like mobile phones) where it might get in the way */
-        @media (max-width: 768px) {
-            .social-sidebar {
-                display: none;
-            }
-        }
-
-        .container-fluid {
-                padding-left: 1%;
-                margin: 0%;
-                text-align: left;
-        }
-
-        .img-fluid {
-            max-width: auto;
-            height:auto;
-        }
-
-        .text-center {
-                text-align: center;
-                padding-left: 5px; /* Adjusted padding for no gap */
-            }
-
-      
-        .top-bar {
-          background-color: #2f4279; /* Dark blue background */
-          padding: 10px 20px;
-          display: flex;
-          justify-content: flex-end; /* Aligns the button to the right */
-          gap: 16px;
-        }
-
-        
-        .divider-bar {
-          width: 3px;
-          height: auto;
-          background: white;
-          border-radius: 2px;  
-        }
-        
-
-        .donate-button {
-            background-color: transparent; /* Red color */
-            color: #ffffff;
-            padding: 8px 18px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 17px;
-            transition: background-color 0.3s ease;
-        }
-
-        .vision-button {
-            background-color: transparent; /* Blue color */
-            color: #ffffff;
-            padding: 8px 18px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 17px;
-            transition: background-color 0.3s ease;
-        }
-
-        .vision-button:hover {
-            background-color: #2980b9; /* Darker blue on hover */
-        }
-
-        .donate-button:hover {
-            background-color: #d43423e8;
-        }
-
-        /* .banner {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 2rem;
-          background: white;
-          gap: 2rem;
-          box-shadow: 0 0px 0px rgba(0, 0, 0, 0.627);
-          margin-top: 10px;
-        }
-
-        .globe {
-          width: 150px;
-          height: 150px;
-          animation: spin 20s linear infinite;
-        }
-
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-
-        .divider {
-          width: 5px;
-          height: 110px;
-          background: #313D5A;
-          border-radius: 10px;
-          margin-top: 5px;
-        }
-
-        .svg-image {
-          width: 280px; /* Or any size you want */
-          /* height: auto; 
-          margin-top: 10px;
-        } */ 
-
-        /* --- Default styles for mobile --- */
-        .banner {
-          display: flex;
-          /* Change to a vertical layout */
-          flex-direction: row; 
-          align-items: center;
-          justify-content: center;
-          padding: 2rem;
-          background: white;
-          /* Adjust gap for vertical stacking */
-          gap: 1.5rem; 
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .globe {
-          /* Slightly smaller globe for mobile */
-          width: 100px;
-          height: 100px; 
-          animation: spin 20s linear infinite;
-        }
-
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-
-        .divider {
-          /* Change to a vertical divider for mobile */
-          width: 1px; 
-          height: 2px;
-          background: #888;
-          border-radius: 4px;
-        }
-
-        .svg-image {
-          width: 200px; 
-          height: auto;
-          margin-top: 10px;
-        } */ 
-       
-        .rich-line {
-          font-size: 10rem; /* Slightly smaller font for mobile */
-        }
-
-        /* --- Media Query for Desktops (screens wider than 768px) --- */
-        @media (min-width: 768px) {
-          .banner {
-            /* Switch back to horizontal layout */
-            flex-direction: row; 
-            gap: 2rem;
-          }
-
-          .globe {
-            /* Restore original globe size */
-            width: 150px;
-            height: 150px;
-          }
-
-          .divider {
-            /* Switch back to a vertical divider */
-            width: 3px;
-            height: 80px; 
-            border-radius: 4px;
-          }
-
-          .svg-image {
-          width: 280px; 
-          height: auto;
-          margin-top: 10px;
-        } */ 
-
-        .rich-line {
-          /* Restore original font size */
-          font-size: 3rem; 
-        }
-        }
-
-        /* .text {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .rich-line {
-          font-size: 3rem;
-          font-weight: bold;
-          display: flex;
-          gap: 0.3rem;
-        } */
-
-        /* .r { color: #0057ff; }
-        .i { color: #ff1e1e; }
-        .c { color: #fca311; }
-        .h { color: #007f00; }
-
-        .tagline {
-          font-size: 1rem;
-          color: #333;
-          margin-top: 0.3rem;
-        } */
-
-        /* --- Animation Keyframes --- */
-        
-        /* Slides an element in from the left
-        @keyframes slideInFromLeft {
-            from { 
-                opacity: 0; 
-                transform: translateX(-100px); 
-            }
-            to { 
-                opacity: 1; 
-                transform: translateX(0); 
-            }
-        }
-        
-        /* Animates the width of an element from 0 to its full width */
-        /* @keyframes growBar {
-            from { width: 0; opacity: 0; }
-            to { width: 300px; opacity: 1; }
-        } */
-
-        /* --- Animated Elements --- */
-        /* .globe-anime, .text-anime {
-            opacity: 0; 
-            animation-name: slideInFromLeft;
-            animation-duration: 1.2s;
-            animation-timing-function: ease-out;
-            animation-fill-mode: forwards;
-        }
-         */
-        /* .globe-anime {
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
-            animation-delay: 0.5s; 
-        } */
-
-        /* .divider-anime {
-            width: 0; 
-            height: 4px;
-            background: white;
-            border-radius: 2px;
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-            animation: growBar 1s ease-out 1.0s forwards; 
-        } */
-
-        /* .text-anime {
-            animation-delay: 1.5s; 
-        } */
-/* 
-        .svg-image-anime {
-            filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
-        }  */
-
+.highlight {
+  background-color: yellow;
+}
 
   </style>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 
@@ -741,92 +427,74 @@
 
 
 
+<!------------------ TOP SITE ------------------>  
+  <!-- <div class="site-wrap"> -->
 
-  <div class="site-wrap">
-
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
       </div>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div> <!-- .site-mobile-menu -->
+
+    <!--LOAD HEADER (Header Styles Contained in header.css and Header JS Contained in header.js)-->
+    <div id="header-container"></div>
 
 
-    <div style="top: 0px; " id="myLogo" class="site-navbar-wrap js-site-navbar bg-white">
 
 
-      <div class="top-bar">
-        <a href="https://www.richinc.org/RICH/rich_new_vision/rich_new_vision.html" class="vision-button" target="_blank"> New Vision Launch </a>
-        <div class="divider-bar"></div> 
-        <a href="https://www.paypal.com/donate?hosted_button_id=JW6KJBX9789RC" class="donate-button" target="_blank"> Donate </a>
-      </div>
+    <!--Hero Section-->
+<section class="hero-slideshow">
+  <!-- <div class="hero-content">
+    <h1>RICH Is Made For <span>YOU!</span></h1>
+    <p>Apply now for the <strong>BEST</strong> programs</p>
+    <a href="contact-us.html" class="hero-btn">Apply Now</a>
+  </div> -->
+</section>
 
-  
 
-      <!-- <div class="container-fluid">
-        <div class="text-left pics_in_a_row">
-            <a href="https://www.richinc.org/RICH/rich_new_vision/rich_new_vision.html"> -->
-                <!-- Using a placeholder for your logo -->
-                <!-- <img class="img-fluid top" src="nvl.png" alt="RICH">
-            </a>
-        </div>
-    </div> -->
+
+
+  <!-- <section class="parallax-section vision-section">
+    <div class="parallax-bg"></div>
+    <div class="vision-content">
+      <h2>Explore New Heights</h2>
+    </div>
+  </section> -->
+
+    
+    <div style="top: 0px; " id="myLogo" class="site-navbar-wrap js-site-navbar bg-white" hidden>
+
+
 
       <div class="container-fluid">
 
-        <!-- <div class="text-center">
-            <a href="index.html"><img class="img-fluid" src="images/LOGO-new.jpg" alt="RICH"></a>
-        </div> -->
-  
-            
-        <div class="banner">
-          <img src="brand-globe.png" alt="RICH Globe" class="globe">
-          <div class="divider"></div>
-          <div class="text">
-            <!-- <div class="rich-line">
-              <span class="r">R</span>
-              <span class="i">I</span>
-              <span class="c">C</span>
-              <span class="h">H</span>
-            </div>
-            <div class="tagline">Reach Into Cultural Heights</div> -->
-            <img src="images/rich-logo.svg" class="svg-image" alt="RICH">
-       
-
-          </div>
-        </div>
-  
-          <!-- <a href="https://www.instagram.com/p/CqocMt_PwZ3/?utm_source=ig_web_button_share_sheet">
+        <div class="text-center pics_in_a_row nav-bar">
+          <a class="hidden" href="https://www.instagram.com/p/CqocMt_PwZ3/?utm_source=ig_web_button_share_sheet">
             <img class="img-fluid top" src="3decade.png"
               href="https://www.instagram.com/p/CqocMt_PwZ3/?utm_source=ig_web_button_share_sheet" alt="..." width="200"
               height="200"></a>
 
 
-          <a href="index.html"><img class="img-fluid top" src="images/LOGO.png" href="index.html" alt="..."></a>
+          <a id="site-logo" href="index.html"><img class="img-fluid top" src="images/LOGO.png" href="index.html" alt="..."></a>
 
-          <a href="https://www.richinc.org/RICH/rich_new_vision/rich_new_vision.html">
+          <a class="hidden" href="https://www.richinc.org/RICH/rich_new_vision/rich_new_vision.html">
             <img class="img-fluid top" src="nvl.png" alt="..." width="200" height="187">
           </a>
-           -->
+          
 
+        </div>
          
-        <!-- <div class="icon-links">
-          <a href="https://www.instagram.com/richincstudents/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/reach-into-cultural-heights/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.youtube.com/channel/UCqAvWoYXzpvOtIstzJ8LBBg?view_as=subscriber" target="_blank"><i class="fab fa-youtube"></i></a>
-          <a href="https://www.tiktok.com/@reachintoculturalheights" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div> -->
-
-        <div class="social-sidebar">
+        <div class="icon-links">
           <a href="https://www.instagram.com/richincstudents/" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="https://www.linkedin.com/company/reach-into-cultural-heights/" target="_blank"><i class="fab fa-linkedin"></i></a>
           <a href="https://www.youtube.com/channel/UCqAvWoYXzpvOtIstzJ8LBBg?view_as=subscriber" target="_blank"><i class="fab fa-youtube"></i></a>
           <a href="https://www.tiktok.com/@reachintoculturalheights" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
 
-        <!-- <div class="search-container">
+        <div class="search-container">
           <div class="search_box">
               <form action="" id="form2">
                   <div>
@@ -834,19 +502,7 @@
                       <input type="button" id="submit_form" class="search-button" onclick="checkInput()" value="Submit">
                   </div>
               </form>
-          </div> -->
-
-          <!-- <div class="search-container">
-            <div class="search_box">
-                <form action="" id="form2" onsubmit="return false;">
-                    <div>
-                        <input type="text" id="search" class="search-bar" placeholder="Search...">
-                        <input type="button" id="submit_form" class="search-button" onclick="checkInput()" value="Submit">
-                    </div>
-                </form>
-            </div>
-        </div>    
-       -->
+          </div>
       </div>
         <div class="site-navbar bg-light">
           <div class="py-1">
@@ -857,7 +513,7 @@
                   <div class="container-fluid">
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3" style="float:right;"><a href="#"
                         class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
+                      
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
 
                       <li><a class="activelink" href="index.html">Home</a></li>
@@ -944,7 +600,7 @@
       </div>
     </div>
 
-    <div id="logoHeight" style="height: 350px;"></div>
+    <div id="logoHeight" style="height: 350px;" hidden></div>
     <!-- <div id="newAttention" class="alert alert-info">
 		<marquee> <a href="campaign1.html">"Then & Now"</a></marquee>
 	</div> -->
@@ -982,7 +638,7 @@
       });
     </script>
 
-    <!-- <div class="sectiontwo">
+    <div class="sectiontwo" hidden>
       <div class="carousel">
         <button class="carousel__button button__left">
           <img style="transform: rotate(180deg);" src="images/right-arrow.png">
@@ -1007,7 +663,7 @@
             </li>
             <li class="carousel__slide">
               <img class="carousel__image" src="QueensImage.jpg">
-            </li> 
+            </li>
           </ul>
         </div>
         <button class="carousel__button button__right">
@@ -1025,7 +681,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!--
     <div id = "logoHeight" style="height: 300px;"></div>
@@ -1057,9 +713,9 @@
 </div>
 
 -->
-  
+  <!-- </div> -->
 
-  <!-- <script>
+  <script>
     function hidePopup() {
       var x = document.getElementById("myForm");
       var y = document.getElementById("botButton");
@@ -1067,11 +723,11 @@
       y.style.display = "block";
     }
   </script>
-
+<!------------------ CHAT BOT ------------------>
   <img id="botButton" class="chat-open" onmouseover="this.style.transform = 'scale(1.1,1.1)'"
     onmouseout="this.style.transform = 'scale(1.0,1.0)'" onclick="openForm()" src="images/botbutton-crop.png"
-    class="img-fluid"> -->
-<!-- 
+    class="img-fluid">
+
   <div class="chat-popup" id="myForm">
     <div class="form-container">
       <span onclick="closeForm()" style="float:right;" class="close">&times;</span>
@@ -1091,30 +747,23 @@
         </div>
       </div>
 
-      <label for="msg"><b>Message</b></label>-->
-      <!-- <div class="row" style="padding: 15px">
+      <!--<label for="msg"><b>Message</b></label>-->
+      <div class="row" style="padding: 15px">
         <textarea id="question" class="col-lg-10 col-md-10" placeholder="How can I help you?"></textarea>
         <button onclick="addQuestion()" style="font-size: 11px; background: lightblue; border: none; padding: 0;"
-          class="col-lg-2 col-md-2">Send</button> -->
+          class="col-lg-2 col-md-2">Send</button>
         <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
-      <!-- </div>
-    </div>
-  </div>  -->
-
-  <div class="container-fluid">
-    <div id="myVideo" class="container-fluid">
-      <div class="embed-responsive embed-responsive-16by9  carousel_center">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1UW0hPzwHcY" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 
+<!------------------ MISSION STATEMENT ------------------>  
   <div class="site-section">
     <div class="container">
       <div class="row">
         <div class="text-center">
-          <h2 style="color: #2f4279; font-size: 50px"  class="mb-3">Mission Statement</h2>
-          <p style="padding-left:20px;padding-right:20px;font-size: 30px; text-align: center;" class="mb-4">Reach Into
+          <h2 style="color: #2f4279" class="mb-3">Mission Statement</h2>
+          <p style="padding-left:20px;padding-right:20px;font-size: 20px; text-align: center;" class="mb-4">Reach Into
             Cultural Heights (RICH) focuses on creating innovation for urban students using classroom and online
             self-directed learning strategies.</p>
         </div>
@@ -1125,14 +774,15 @@
           Program</button>
       </div>
     </div>
+  </div>
 
-
-  <!-- <div class="container-fluid">
+  <!------------------ SITE VIDEO ------------------>
+  <div class="container-fluid">
     <div id="myVideo" class="container-fluid">
       <div class="embed-responsive embed-responsive-16by9  carousel_center">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1UW0hPzwHcY" allowfullscreen></iframe>
       </div>
-      
+      <!--
     <div class="img-border">
     <a href="https://vimeo.com/28959265" class="popup-vimeo image-play">
     <span class="icon-wrap">
@@ -1149,13 +799,15 @@
 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nobis magni eaque velit eum, id rem eveniet dolor possimus voluptas..</p>
 <p><a href="https://vimeo.com/28959265" class="popup-vimeo text-uppercase">Watch Video <span class="icon-arrow-right small"></span></a></p>
 </div>
-
+-->
     </div>
-  </div> -->
+  </div>
 
+
+<!------------------ COMMITMENT SECTION ------------------>
   <div class="site-section site-block-feature">
     <div class="container">
-      <h1 style="color: #2f4279; margin-left: 1em; font-size: 50px; text-align: center; font: bold;" class="text-center"> RICH Student's Commitment </h1><br>
+      <h1 style="color: #2f4279; margin-left: 1em;" class="text-center"> RICH Student's Commitment </h1><br>
       <div class="d-block d-md-flex border-bottom">
         <div class="text-center p-4 item border-right">
           <span class="display-3 mb-3 d-block text-primary"><img style="cursor: pointer;"
@@ -1201,14 +853,15 @@
 
   <br>
 
+  <!------------------ GAME CONTAINER ------------------>
   <div id="gameContainer"
-    style="width: 100%; border: 8px solid #313D5A; min-height: 400px; position: relative; border-radius: 10px;"
+    style="width: 75%; border: 8px solid #313D5A; min-height: 400px; position: relative; border-radius: 10px;"
     class="container-fluid">
 
     <div id="playScreen" class="text-center">
       <!--<h1 style = "font-size: 70px"> <span style = "color: blue; font-weight: 900;">R</span> <span style = "color: red;font-weight: 900;">I</span> <span style = "color: green;font-weight: 900;">C</span> <span style = "color: yellow;font-weight: 900;">H</span> </h1>-->
       <img class="img-fluid" src="images/gameLogo.png"><br>
-      <img style="cursor: pointer"  onclick="playGame()" class="img-fluid" src="images/playButton.png">
+      <img style="cursor: pointer" "pointer" onclick="playGame()" class="img-fluid" src="images/playButton.png">
       <!--<button class="btn-primary" style="font-size: 35px; width: 25%; padding: 20px; border-radius: 30px;"> Play </button>-->
     </div>
 
@@ -1247,6 +900,7 @@
   <br><br><br>
   <hr>
   <br>
+  <!------------------ REVIEW SECTION ------------------>
   <div class="text-center">
     <h1 style="color: #2f4279"> Reviews </h1>
   </div>
@@ -1375,22 +1029,23 @@
     </div>
   </div>
   <hr>
+  <!------------------ DONATE CONTAINER ------------------>
   <div>
     <div id="donateContainer" class="container">
       <div class="row">
         <div class="text-center">
-          <a href="https://www.paypal.com/donate?hosted_button_id=JW6KJBX9789RC"><button class="portalbutton"
-            style="font-size: 35px;" type="button"> Donate Today </button></a><br><br>
+          <a href="https://www.paypal.com/donate?hosted_button_id=JW6KJBX9789RC">
+            <h1 style="color: #2f4279"> Donate Today </h1>
           </a><br>
-          <p style="font-size: 20px;"> Your donation will help us create an online
+          <p style="padding-left:20px;padding-right:20px;font-size: 20px;"> Your donation will help us create an online
             community dedicated to innovation intended for the next generation of leaders who will lead as positive
             thinkers and productive citizens. </p><br>
-          <!-- <a href="https://www.paypal.com/donate?hosted_button_id=JW6KJBX9789RC"><button class="portalbutton"
-              style="font-size: 50px;" type="button"> Donate Today </button></a><br><br><br> -->
+          <a href="https://www.paypal.com/donate?hosted_button_id=JW6KJBX9789RC"><button class="portalbutton"
+              style="font-size: 25px;" type="button"> Donate </button></a><br><br>
           <h2 class="text-center" style="font-style: italic;"> "It is all about the student's mindset" </h2>
           <br>
           <p style="text-align:left; font-size: 20px;">
-            Reach Into Cultural Heights, a tax-exempt organization under Section 501
+            Donations to the Reach Into Cultural Heights, a tax-exempt organization under Section 501
             (c)(3) of the Internal Revenue Code, are deductible for computing income and estate taxes.
             <br>
 
@@ -1494,7 +1149,7 @@
       </div>
     </div>
   </footer> -->
-
+  <!------------------ FOOTER CONTAINER ------------------>
   <footer class="site-footer">
     <div class="container">
 
@@ -1511,7 +1166,7 @@
             <br>
             Copyright &copy;
             <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-            <script>document.write(new Date().getFullYear());</script> All Rights Reserved <a
+            <script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made by <a
               href="https://colorlib.com" target="_blank">Colorlib</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </p>
@@ -2182,7 +1837,7 @@
 
 
   </script>
-
+  <script src="js/header.js"></script>
 </body>
 
 </html>

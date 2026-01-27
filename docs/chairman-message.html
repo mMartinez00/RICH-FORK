@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="css/animate.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
@@ -29,9 +29,9 @@
 
   <link rel="stylesheet" href="css/style.css">
   
-  <style>
+  `<style>
 		.icon-links{
-			text-align: center;
+			text-align: right;
 			font-size: 24px;
 			width: 100%;
 		}
@@ -55,114 +55,6 @@
 			padding-right: 55px;
 		  }
 		}
-
-    /* --- Default styles for mobile --- */
-    .banner {
-          display: flex;
-          /* Change to a vertical layout */
-          flex-direction: row; 
-          align-items: center;
-          justify-content: center;
-          padding: 2rem;
-          background: white;
-          /* Adjust gap for vertical stacking */
-          gap: 1.5rem; 
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .globe {
-          /* Slightly smaller globe for mobile */
-          width: 100px;
-          height: 100px; 
-          animation: spin 20s linear infinite;
-        }
-
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-
-        .divider {
-          /* Change to a vertical divider for mobile */
-          width: 1px; 
-          height: 2px;
-          background: #888;
-          border-radius: 4px;
-        }
-
-        .svg-image {
-          width: 200px; 
-          height: auto;
-          margin-top: 10px;
-        } */ 
-       
-        .rich-line {
-          font-size: 10rem; /* Slightly smaller font for mobile */
-        }
-
-        /* --- Media Query for Desktops (screens wider than 768px) --- */
-        @media (min-width: 768px) {
-          .banner {
-            /* Switch back to horizontal layout */
-            flex-direction: row; 
-            gap: 2rem;
-          }
-
-          .globe {
-            /* Restore original globe size */
-            width: 150px;
-            height: 150px;
-          }
-
-          .divider {
-            /* Switch back to a vertical divider */
-            width: 3px;
-            height: 80px; 
-            border-radius: 4px;
-          }
-
-          .svg-image {
-          width: 280px; 
-          height: auto;
-          margin-top: 10px;
-        } */ 
-
-        .rich-line {
-          /* Restore original font size */
-          font-size: 3rem; 
-        }
-        }
-	      .social-sidebar {
-            position: fixed; /* This is the key property that makes it "stick" */
-            top: 50%; /* Positions it vertically in the middle of the screen */
-            left: 50px; /* Positions it from the left edge of the screen */
-            transform: translateY(-50%); /* This perfectly centers it vertically */
-            z-index: 1000; /* Ensures it stays on top of other page content */
-            
-            display: flex;
-            flex-direction: column; /* Stacks the icons on top of each other */
-            gap: 1px; /* Adds space between the icons */
-            
-            background-color: #0e0101e6;
-            padding: 15px 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(232, 226, 226, 0.828);
-            margin-top: 110px;
-        }
-
-        /* Styling for the individual icon links */
-        .social-sidebar a {
-            color: #fff5f5; /* Icon color */
-            font-size: 24px; /* Icon size */
-            transition: transform 0.2s ease-in-out, color 0.2s;
-        }
-
-        /* Adds a nice effect when you hover over the icons */
-        .social-sidebar a:hover {
-            color: #007bff; /* Change color on hover */
-            transform: scale(1.2); /* Make the icon slightly larger */
-        }
-
 	</style>
 
 </head>
@@ -182,10 +74,9 @@
 
 
     <div id="myLogo" class="site-navbar-wrap js-site-navbar bg-white">
-
       <div class="container-fluid">
 
-        <!-- <div class="text-center pics_in_a_row">
+        <div class="text-center pics_in_a_row">
           <a href="https://www.instagram.com/p/CqocMt_PwZ3/?utm_source=ig_web_button_share_sheet">
             <img class="img-fluid top" src="3decade.png"
               href="https://www.instagram.com/p/CqocMt_PwZ3/?utm_source=ig_web_button_share_sheet" alt="..." width="200"
@@ -199,129 +90,105 @@
           </a>
         </div>
 		
-        <div class="icon-links">
-          <a href="https://www.instagram.com/richincstudents/" target="_blank"><i class="fa fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/reach-into-cultural-heights/" target="_blank"><i
-              class="fa fa-linkedin-square"></i></a>
-          <a href="https://www.youtube.com/channel/UCqAvWoYXzpvOtIstzJ8LBBg?view_as=subscriber" target="_blank"><i
-              class="fa fa-youtube-square"></i></a>
-        </div> -->
+		<div class="icon-links">
+			<a href="https://www.instagram.com/richincstudents/" target = "_blank"><i class="fa fa-instagram"></i></a>
+			<a href="https://www.linkedin.com/company/reach-into-cultural-heights/" target = "_blank"><i class="fa fa-linkedin-square"></i></a>
+			<a href="https://www.youtube.com/channel/UCqAvWoYXzpvOtIstzJ8LBBg?view_as=subscriber" target = "_blank"><i class="fa fa-youtube-square"></i></a>
+		</div>
 
-    
+        <div class="site-navbar bg-light">
+          <div class="py-1">
+            <div class="row align-items-left">
 
-    <div class="banner">
-      <img src="brand-globe.png" alt="RICH Globe" class="globe">
-      <div class="divider"></div>
-      <div class="text">
-        <img src="images/rich-logo.svg" class="svg-image" alt="RICH">
-      </div>
-    </div>
+              <div class="col-12">
+                <nav class="site-navigation text-center" role="navigation">
+                  <div class="container-fluid">
+                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3" style="float:right;"><a href="#"
+                        class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
+                    <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-      <div class="social-sidebar">
-              <a href="https://www.instagram.com/richincstudents/" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/reach-into-cultural-heights/" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://www.youtube.com/channel/UCqAvWoYXzpvOtIstzJ8LBBg?view_as=subscriber" target="_blank"><i class="fab fa-youtube"></i></a>
-              <a href="https://www.tiktok.com/@reachintoculturalheights" target="_blank"><i class="fab fa-tiktok"></i></a> 
-            </div>
+                      <li><a href="index.html">Home</a></li>
 
-
-    <div class="site-navbar bg-light">
-      <div class="py-1">
-        <div class="row align-items-left">
-
-          <div class="col-12">
-            <nav class="site-navigation text-center" role="navigation">
-              <div class="container-fluid">
-                <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3" style="float:right;"><a href="#"
-                    class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
-                <ul class="site-menu js-clone-nav d-none d-lg-block">
-              
-                  <li><a class="activelink" href="index.html">Home</a></li>
-
-                  <li class="has-children">
-                    <a href="mission.html" style = "color:#c51f1f;">About Us</a>
-                    <!-- <ul class="dropdown arrow-top">-->
-                    <ul class="dropdown menu1">
-                      <li><a href="mission.html">About Reach Into Cultural Heights</a></li>
-                      <li><a href="board-directors.html">Board of Directors</a></li>
-                      <li><a href="interns.html">College Interns</a></li>
-                      <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    </ul> 
-                  </li>
+                      <li class="has-children">
+                        <a href="mission.html">About Us</a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="mission.html">About Reach Into Cultural Heights</a></li>
+                          <li><a href="board-directors.html">Board of Directors</a></li>
+						  <li><a href="interns.html">CUNY Interns</a></li>
+                          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+						  
+                        </ul>
+                      </li>
 
 
 
-                  <li class="has-children">
-                    <a href="overview.html" style = "color:#c5721f;">Our Work</a>
-                    <!-- <ul class="dropdown arrow-top"> -->
-                      <ul class="dropdown menu2">
-                      <li><a href="overview.html">Program Overview</a></li>
-                      <li><a href="rich-learning-system.html">RICH Learning System</a></li>
-                      <li><a href="sdlp.html">Self-Directed Learning Projects</a></li>
-                      <li><a href="nvlpessay1.html">RICH Student Essays to NVLP Elders</a></li>
-                      <li><a href="projectsnack.html">RICH Snacking for Smartness</a></li>
+                      <li class="has-children">
+                        <a href="overview.html">Our Work</a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="overview.html">Program Overview</a></li>
+                          <li><a href="rich-learning-system.html">RICH Learning System</a></li>
+                          <li><a href="sdlp.html">Self-Directed Learning Projects</a></li>
+                          <li><a href="nvlpessay1.html">RICH Student Essays to NVLP Elders</a></li>
+                          <li><a href="projectsnack.html">RICH Snacking for Smartness</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="has-children">
+                        <a href="graduate-testimonials.html">Success Stories</a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="graduate-testimonials.html">Graduate Testimonials</a></li>
+                          <li><a href="first-graduates.html">First Graduates</a></li>
+                          <li><a href="campaign1.html">Then & Now</a></li>
+                          
+                        </ul>
+                      </li>
+
+                      <li class = "activelink"><a href="parents-investment-alliance.html">Parents Investment Alliance</a></li>
+                      <!--
+                          <li><a href="gsuite-classroom.html">G Suite Classroom</a></li>
+                            -->
+
+
+						<li class="has-children">
+							<a href="podcasts.html">Podcasts</a>
+							<ul class="dropdown arrow-top">
+							  <li><a href="podcasts.html">Reach For Success</a></li>
+							</ul>
+						  </li>
+					  
+                      <li class="has-children">
+                        <a href="annual-reports.html">Contact Us</a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="annual-reports.html">Annual Reports</a></li>
+                          <li><a href="partnership-opportunities.html">Partnership Opportunities</a></li>
+                          <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="has-children">
+                        <a onclick="checkLogin()"style="color:#2f7939;">RICH PORTAL</a>
+                        <ul class="dropdown arrow-top">
+                          <li><a onclick="checkLogin()">Portal Login</a></li>
+                          <li><a href="gsuite-classroom.html">G Suite Classroom</a></li>
+                        </ul>
+                      </li>
+                      <!--
+                          <li>
+                            <button class="portalbutton" onclick="checkLogin()"> RICH PORTAL </button>
+                          </li>
+                        -->
+
+
                     </ul>
-                  </li>
-
-                  <li class="has-children">
-                    <a href="graduate-testimonials.html" style="color:#2f7939;">Success Stories</a>
-                    <!-- <ul class="dropdown arrow-top"> -->
-                      <ul class="dropdown menu3">
-                      <li><a href="graduate-testimonials.html">Graduate Testimonials</a></li>
-                      <li><a href="first-graduates.html">First Graduates</a></li>
-                      <li><a href="campaign1.html">Then & Now</a></li>
-                    </ul>
-                  </li>
-
-                  <li><a href="parents-investment-alliance.html">Parents Investment Alliance</a></li>
-                  <!--
-                  <li><a href="gsuite-classroom.html">G Suite Classroom</a></li>-->
-
-                  <li class="has-children">
-                    <a href="podcasts.html" style = "color:#c51f1f;">Podcasts</a>
-                    <!-- <ul class="dropdown arrow-top"> -->
-                      <ul class="dropdown menu4">
-                      <li><a href="podcasts.html">Reach For Success</a></li>
-                    </ul>
-                  </li>
-
-                  <li class="has-children">
-                    <a href="annual-reports.html"style = "color:#c5721f;">Contact Us</a>
-                    <!-- <ul class="dropdown arrow-top"> -->
-                      <ul class="dropdown menu5">
-                      <li><a href="annual-reports.html">Annual Reports</a></li>
-                      <li><a href="partnership-opportunities.html">Partnership Opportunities</a></li>
-                      <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                  </li>
-
-                  <li class="has-children">
-                    <a onclick="checkLogin()"style="color:#2f7939;">RICH PORTAL</a>
-                    <!-- <ul class="dropdown arrow-top"> -->
-                      <ul class="dropdown menu6">
-                      <li><a onclick="checkLogin()">Portal Login</a></li>
-                      <li><a href="gsuite-classroom.html">G Suite Classroom</a></li>
-                    </ul>
-                  </li>
-                  <!--
-                  <li>
-                    <button class="portalbutton" onclick="checkLogin()"> RICH PORTAL </button>
-                  </li>
-                -->
-
-
-                </ul>
-
+                  </div>
+                </nav>
               </div>
-            </nav>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
     <div id="logoHeight" style="height: 350px;"></div>
 
@@ -329,10 +196,10 @@
       <div class="col-md-8 mx-auto no-sidebar">
         <div class="shapely-content">
 
-          <h2 style = "text-align: center;"> In the Memory of Former Chairman - Bill McCreary (2008-2021) </h2><br>
+          <h2 style = "text-align: center;"> Former Chairman - The late Bill McCreary (2008-2021)</h2><br>
 
 		  <img src = "images/bill_mccreary_2.jpg" id="mccreary_profile">
-          <p style="font-size: 18px;" class="profile_bio"> "I chose to work with this organization because of its emphasis on helping
+          <p style="font-size: 18px;" class="profile_bio"> I chose to work with this organization because of its emphasis on helping
             young people learn to use language to express meaning and purpose in their
             lives, as well as the organization’s focus on working with parents to help
             guide their children.
@@ -342,7 +209,7 @@
             As a journalist, I was intrigued by the organization’s work with youth
             and how they used learning materials from the National Visionary Leadership
             Project (NVLP) to enrich students understanding of putting forth effort for
-            future success. The NVLP’s <i>Wisdom of Elders</i> project provided the foundation
+            future success. The NVLP’s “Wisdom of Elders” project provided the foundation
             for the incorporation of the inspiring wisdom and guidance of elders into the
             RICH program model. An opportunity I participated in 2009 the same year that
             I became a RICH board member.
@@ -350,14 +217,14 @@
 
           <p style="font-size: 18px;" class="profile_bio">
             In 2011, RICH launched, Parent Investment Alliance (PIA) that conducts
-            workshops under the theme: <i>Our children, our greatest investment</i>. RICH
+            workshops under the theme: Our children, our greatest investment. RICH
             views the importance of working with parents as a critical social environmental
             issue, particularly during the difficult adolescent years. What I find most
             promising is that under the PIA program RICH is leading the way by offering
             parents a solution to changing the conversation with their children. Too often
             we talk about a myriad of problems with our youth. We speak about what isn’t
             being done and what needs to be done. Here we have an organization which saw a
-            problem and created a solution for youth and parents."
+            problem and created a solution for youth and parents.
           </p>
 
           <p style="font-size: 18px; float:right;">
@@ -455,11 +322,11 @@ Phone: (123) 3240-345-9348 </p>
     window.onscroll = function () {
 
       if (window.pageYOffset > 20) {
-        document.getElementById("myLogo").style.top = "-250px";
+        document.getElementById("myLogo").style.top = "-220px";
         document.getElementById("logoHeight").style.height = "200px";
       } else {
         document.getElementById("myLogo").style.top = "0px";
-        document.getElementById("logoHeight").style.height = "375px";
+        document.getElementById("logoHeight").style.height = "350px";
       }
     }
 
@@ -487,12 +354,12 @@ Phone: (123) 3240-345-9348 </p>
     function checkLogin() {
 
       if (userInfo == "" || userInfo == "undefined") {
-        window.location.href = "login.php";
+        window.location.href = "login.html";
       }
       else {
         window.location.href = "Account/portal-home.html";
       }
-      //window.location.href = "login.php";
+      //window.location.href = "login.html";
     }
     //---------------------------------------------------------------------------------
 

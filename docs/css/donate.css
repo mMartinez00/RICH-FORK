@@ -1,0 +1,77 @@
+
+
+/* Hero Section */
+.hero {
+     background: linear-gradient(to bottom right, #004aad, #187bcd);
+     padding: 80px 20px;
+     text-align: center;
+     color: white;
+}
+
+.hero h1 {
+     font-size: 42px;
+     margin-bottom: 10px;
+}
+
+.hero p {
+     font-size: 18px;
+     opacity: 0.9;
+     max-width: 700px;
+     margin: auto;
+}
+
+/* Content Section */
+.section {
+     max-width: 900px;
+     margin: 40px auto;
+     padding: 0 20px;
+}
+
+.section h2 {
+     font-size: 28px;
+     margin-bottom: 10px;
+     color: #004aad;
+}
+
+.impact-list li {
+     margin: 8px 0;
+     font-size: 18px;
+}
+
+/* Donate button */
+.donate-btn {
+     display: block;
+     width: fit-content;
+     margin: 40px auto;
+     padding: 15px 40px;
+     background: #ffc439;
+     border-radius: 8px;
+     color: #111;
+     font-size: 20px;
+     font-weight: bold;
+     text-decoration: none;
+     transition: 0.2s ease;
+}
+
+.donate-btn:hover {
+     background: #e0ab32;
+}
+
+/* Fade animation */
+.fade-in {
+     opacity: 0;
+     transform: translateY(20px);
+     transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+     opacity: 1;
+     transform: translateY(0);
+}
+
+footer {
+     text-align: center;
+     margin: 60px 0 20px;
+     font-size: 14px;
+     color: #666;
+}

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +6,7 @@
   <title>RICH &mdash; Reach Into Cultural Heights</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
 
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 
@@ -20,11 +22,13 @@
   <link rel="stylesheet" href="css/animate.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
   <link rel="stylesheet" href="css/aos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -248,120 +252,16 @@
         margin-bottom: 60px;
     }
 
-    /* --- Default styles for mobile --- */
-    .banner {
-          display: flex;
-          /* Change to a vertical layout */
-          flex-direction: row; 
-          align-items: center;
-          justify-content: center;
-          padding: 2rem;
-          background: white;
-          /* Adjust gap for vertical stacking */
-          gap: 1.5rem; 
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .globe {
-          /* Slightly smaller globe for mobile */
-          width: 100px;
-          height: 100px; 
-          animation: spin 20s linear infinite;
-        }
-
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-
-        .divider {
-          /* Change to a vertical divider for mobile */
-          width: 1px; 
-          height: 2px;
-          background: #888;
-          border-radius: 4px;
-        }
-
-        .svg-image {
-          width: 200px; 
-          height: auto;
-          margin-top: 10px;
-        } */ 
-       
-        .rich-line {
-          font-size: 10rem; /* Slightly smaller font for mobile */
-        }
-
-        /* --- Media Query for Desktops (screens wider than 768px) --- */
-        @media (min-width: 768px) {
-          .banner {
-            /* Switch back to horizontal layout */
-            flex-direction: row; 
-            gap: 2rem;
-          }
-
-          .globe {
-            /* Restore original globe size */
-            width: 150px;
-            height: 150px;
-          }
-
-          .divider {
-            /* Switch back to a vertical divider */
-            width: 3px;
-            height: 80px; 
-            border-radius: 4px;
-          }
-
-          .svg-image {
-          width: 280px; 
-          height: auto;
-          margin-top: 10px;
-        } */ 
-
-        .rich-line {
-          /* Restore original font size */
-          font-size: 3rem; 
-        }
-        }
-	    .social-sidebar {
-            position: fixed; /* This is the key property that makes it "stick" */
-            top: 50%; /* Positions it vertically in the middle of the screen */
-            left: 50px; /* Positions it from the left edge of the screen */
-            transform: translateY(-50%); /* This perfectly centers it vertically */
-            z-index: 1000; /* Ensures it stays on top of other page content */
-            
-            display: flex;
-            flex-direction: column; /* Stacks the icons on top of each other */
-            gap: 20px; /* Adds space between the icons */
-            
-            background-color: #0e0101e6;
-            padding: 15px 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(232, 226, 226, 0.828);
-            margin-top: 110px;
-        }
-
-        /* Styling for the individual icon links */
-        .social-sidebar a {
-            color: #fff5f5; /* Icon color */
-            font-size: 24px; /* Icon size */
-            transition: transform 0.2s ease-in-out, color 0.2s;
-        }
-
-        /* Adds a nice effect when you hover over the icons */
-        .social-sidebar a:hover {
-            color: #007bff; /* Change color on hover */
-            transform: scale(1.2); /* Make the icon slightly larger */
-        }
-	
   </style>
-
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/contact.css" />
 </head>
 
 <body>
-
-  <div class="site-wrap">
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -372,12 +272,114 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
 
+    <!--LOAD HEADER (Header Styles Contained in header.css and Header JS Contained in header.js)-->
+    <div id="header-container"></div>
 
-    <div id="myLogo" class="site-navbar-wrap js-site-navbar bg-white">
+    <!-- Contact Section -->
+<section class="contact-container">
+  <img src="images/brand-globe.png" alt="" class="brand-logo">
+
+  <div class="form">
+
+    <!-- Left Info -->
+    <div class="contact-info">
+      <h3 class="title">Let’s Get in Touch</h3>
+      <p class="text">
+        Interested In The RICH, Inc., Reach For Success Online Program?
+      </p>
+
+      <div class="info">
+        <div class="information">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>
+            <a href="https://www.google.com/maps/dir//reach+into+the+cultural+heights+address/@40.6726398,-74.0425785,11z"
+               target="_blank" rel="noopener noreferrer">
+               Boulevard, CEP Hall 2 Flushing, New York 11367.
+            </a>
+          </p>
+        </div>
+
+        <div class="information">
+          <i class="fa-solid fa-envelope"></i>
+          <p>Contact@richinc.org</p>
+        </div>
+
+        <div class="information">
+          <i class="fa-solid fa-phone"></i>
+          <p>+1 (929) 242-9036</p>
+        </div>
+      </div>
+
+      <!-- <p>
+        <a href="https://classroom.google.com/c/NzA5NDAxOTM3MjY2?cjc=3vfpigb"
+        target="_blank" rel="noopener noreferrer">
+        Get a sample of our Online Classroom here
+        </a>
+      </p> -->
+
+      <div class="social-media">
+        <p>Connect with us:</p>
+        <div class="social-icons">
+          <a href="https://www.youtube.com/channel/UCqAvWoYXzpvOtIstzJ8LBBg" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.tiktok.com/@reachintoculturalheights" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.linkedin.com/in/dr-jacqueline-dawson-48964ba/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/richincstudents/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <span class="circle one"></span>
+      <span class="circle two"></span>
+
+      <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
+
+        <!--old key: da91b3f9-83d9-4259-920d-7b7e1ad58ec1-->
+        <!--4deeacbf-85bf-43ae-9b25-713857049f13-->
+        <input type="hidden" name="access_key" value="da91b3f9-83d9-4259-920d-7b7e1ad58ec1">
+    
+        <!-- Email Settings -->
+        <input type="hidden" name="subject" value="New Contact Form Submission - RICH Inc">
+        <input type="hidden" name="from_name" value="RICH Website Contact Form">
+
+
+        <h3 class="title">Contact Us</h3>
+
+        <div class="input-container">
+          <input type="text" name="name" class="input" placeholder=" " required />
+          <label>Full Name</label>
+        </div>
+
+        <div class="input-container">
+          <input type="email" name="email_from" class="input" placeholder=" " required />
+          <label>Email</label>
+        </div>
+
+        <div class="input-container">
+          <input type="tel" name="phone" class="input" placeholder=" " />
+          <label>Phone</label>
+        </div>
+
+        <div class="input-container textarea">
+          <textarea name="message" class="input" placeholder=" " required></textarea>
+          <label>Message</label>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+    <script src="js/contact.js"></script>
+
+    <!--MADE HIDDEN-->
+    <div id="myLogo" class="site-navbar-wrap js-site-navbar bg-white" hidden>
 
       <div class="container-fluid">
 
-        <!-- <div class="text-center pics_in_a_row">
+        <div class="text-center pics_in_a_row">
           <a href="https://www.instagram.com/p/CqocMt_PwZ3/?utm_source=ig_web_button_share_sheet">
             <img class="img-fluid top" src="3decade.png"
               href="https://www.instagram.com/p/CqocMt_PwZ3/?utm_source=ig_web_button_share_sheet" alt="..." width="200"
@@ -393,27 +395,11 @@
 
         <div class="icon-links">
           <a href="https://www.instagram.com/richincstudents/" target="_blank"><i class="fa fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/reach-into-cultural-heights/" target="_blank"><i
+          <a href="https://www.linkedin.com/in/dr-jacqueline-dawson-48964ba/" target="_blank"><i
               class="fa fa-linkedin-square"></i></a>
           <a href="https://www.youtube.com/channel/UCqAvWoYXzpvOtIstzJ8LBBg?view_as=subscriber" target="_blank"><i
               class="fa fa-youtube-square"></i></a>
-        </div> -->
-
-      <div class="banner">
-        <img src="brand-globe.png" alt="RICH Globe" class="globe">
-        <div class="divider"></div>
-        <div class="text">
-          <img src="images/rich-logo.svg" class="svg-image" alt="RICH">
         </div>
-      </div>
-
-
-      <div class="social-sidebar">
-              <a href="https://www.instagram.com/richincstudents/" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/reach-into-cultural-heights/" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://www.youtube.com/channel/UCqAvWoYXzpvOtIstzJ8LBBg?view_as=subscriber" target="_blank"><i class="fab fa-youtube"></i></a>
-              <a href="https://www.tiktok.com/@reachintoculturalheights" target="_blank"><i class="fab fa-tiktok"></i></a>
-            </div>
 
         <div class="site-navbar bg-light">
           <div class="py-1">
@@ -435,7 +421,7 @@
                         <ul class="dropdown menu1">
                           <li><a href="mission.html">About Reach Into Cultural Heights</a></li>
                           <li><a href="board-directors.html">Board of Directors</a></li>
-                          <li><a href="interns.html">College Interns</a></li>
+                          <li><a href="interns.html">CUNY Interns</a></li>
                           <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         </ul>
                       </li>
@@ -512,12 +498,12 @@
         </div>
       </div>
     </div>
-    <div id="logoHeight" style="height: 350px;"></div>
+    <div id="logoHeight" style="height: 350px;" hidden></div>
 
-    <div id="piaContainer" class="container">
+    <div id="piaContainer" class="container" hidden>
 
-      <div class="col-md-8 mx-auto no-sidebar">
-        <div class="shapely-content">
+      <div class="col-md-8 mx-auto no-sidebar" hidden>
+        <div class="shapely-content" hidden>
 
           <div id="contact-beginning" class="contact-section">
             <h1> Contact Us </h1><br>
@@ -580,7 +566,8 @@
     </div>
   </footer>
   </div>
-
+  <!--MADE HIDDEN ENDS-->
+  <script src="js/header.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
@@ -666,4 +653,3 @@
 </body>
 
 </html>
-
