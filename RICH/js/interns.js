@@ -5,7 +5,7 @@ const internsRaw = [
      role: "Full Stack Developer",
      img: "intern_images/ShakilNabil.jpg",
      tags: ["Queens College"],
-     semesters: ["2025-2026"],
+     semesters: ["2025-Fall"],
      bio: `A Full Stack Developer who worked on building and improving web features for the RICH organization. During his internship, he focused on implementing front-end interfaces and supporting back-end functionality to help modernize the website and improve overall structure. He collaborated closely with fellow interns to develop and refine features, translate requirements into working code, and ensure consistency across the site. Through this experience, he strengthened his full-stack development skills, gained hands-on experience working on a real production website, and developed a deeper understanding of how technical solutions support organizational goals.`,
      hsInterns: [
      {
@@ -13,22 +13,20 @@ const internsRaw = [
           img: "intern_images/ShafinAhmed_hs_intern.jpg",
           bio: `A senior at Thomas A. Edison CTE High School with experience in cybersecurity and web development. During his time at RICH, he worked closely in a small team with a college intern, Shakil, contributing ideas and assisting in the redesign of several webpages on the organization’s website. Together, they successfully redesigned the Program Overview page, giving it a more modern and engaging look, and plan to apply the same improvements to additional pages, including the RICH Learning System, Donation Page, Portal Login Page, and Parents Investment Alliance Page. Through this experience, he gained valuable insight into his personal strengths by applying RICH’s core principles to every aspect of his work. The internship also allowed him to significantly strengthen his teamwork and collaboration skills. Working on these projects further deepened his interest in web development, motivating him to pursue more opportunities to refine his technical abilities while continuing to apply RICH’s four core principles to achieve success.`
      },
+     {
+          name: "Syed Ayman",
+          img: "intern_images/SyedAyman_hs_intern.jpeg",
+          bio: "A senior at Thomas A. Edison CTE High School and a RICH intern placed through the ISP internship program. During his duration of the internship, he contributed to the wellbeing of the nonprofit as a whole. He designed various posters used for the Reach Into Cultural Height's social media, created campaigns, provided feedback on what can be changed and improved for both the Google Classroom and Reach Into Cultural Height's website, as well as effectively collaborated with his peers. As a RICH intern, he developed many skills which include the following: collaboration efforts, Canva skills, communication and problem-solving skills, adaptability skills, time management, leadership skills, presentation skills, professionalism, and more. Aside from all these skills, he is passionate about using technology to make a difference, which also happens to be one of Reach Into Cultural Height's goals for its students."
+     }
      ]
      },
      {
      name: "Zarif Islam",
      role: "Software Engineering Intern",
      img: "intern_images/zarif2.jpeg",
-     tags: ["Queens College"],
-     semesters: ["2025-2026"],
+     tags: ["2025-Summer","Queens College"],
+     semesters: ["2025-Spring"],
      bio: `Zarif Islam, a Computer Science student at CUNY Queens College, returned to RICH as a Team Lead and Software Engineering Intern after volunteering with the organization during the spring term 2025. In his role as project lead, he coordinates a four-person development team, overseeing deliverables for all project milestones, utilizing the centralized GitHub deployment workflow management platform. Mr. Islam architected RICH's flagship full-stack educational platform utilizing Next.js, React, and PostgreSQL, and collaborated with a Bloomberg Senior ML Engineer on database design and Google Gemini AI integration. Zarif spearheaded the redesign of the RICH organization’s visual identity, including the new logo and brand design. He presented the execution of his projects to RICH’s stakeholders: a digital data researcher, community leaders, and the RICH board director. His ongoing commitment to RICH's mission exemplifies both technical leadership and a dedication to accessible education technology.`,
-     hsInterns: [
-     {
-          name: "Syed Ayman",
-          img: "intern_images/SyedAyman_hs_intern.jpeg",
-          bio: "A senior at Thomas A. Edison CTE High School and a RICH intern placed through the ISP internship program. During his duration of the internship, he contributed to the wellbeing of the nonprofit as a whole. He designed various posters used for the Reach Into Cultural Height's social media, created campaigns, provided feedback on what can be changed and improved for both the Google Classroom and Reach Into Cultural Height's website, as well as effectively collaborated with his peers. As a RICH intern, he developed many skills which include the following: collaboration efforts, Canva skills, communication and problem-solving skills, adaptability skills, time management, leadership skills, presentation skills, professionalism, and more. Aside from all these skills, he is passionate about using technology to make a difference, which also happens to be one of Reach Into Cultural Height's goals for its students."
-     },
-     ]
      },
      {
      name: "Mubashirul Islam",
