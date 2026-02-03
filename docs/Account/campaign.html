@@ -26,8 +26,6 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    
-
   <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
 
   <link rel="stylesheet" href="../css/aos.css">
@@ -46,6 +44,7 @@
       color: white;
       padding: 1px;
       padding-top: 15px;
+      width: ;
       align-self: center;
       border-radius: 15px;
     }
@@ -96,114 +95,6 @@ justify-content: center;
       width: 100%;
       height: auto;
     }
-
-    /* --- Default styles for mobile --- */
-    .banner {
-          display: flex;
-          /* Change to a vertical layout */
-          flex-direction: row; 
-          align-items: center;
-          justify-content: center;
-          padding: 2rem;
-          background: white;
-          /* Adjust gap for vertical stacking */
-          gap: 1.5rem; 
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .globe {
-          /* Slightly smaller globe for mobile */
-          width: 100px;
-          height: 100px; 
-          animation: spin 20s linear infinite;
-        }
-
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-
-        .divider {
-          /* Change to a vertical divider for mobile */
-          width: 1px; 
-          height: 2px;
-          background: #888;
-          border-radius: 4px;
-        }
-
-        .svg-image {
-          width: 200px; 
-          height: auto;
-          margin-top: 10px;
-        } */ 
-       
-        .rich-line {
-          font-size: 10rem; /* Slightly smaller font for mobile */
-        }
-
-        /* --- Media Query for Desktops (screens wider than 768px) --- */
-        @media (min-width: 768px) {
-          .banner {
-            /* Switch back to horizontal layout */
-            flex-direction: row; 
-            gap: 2rem;
-          }
-
-          .globe {
-            /* Restore original globe size */
-            width: 150px;
-            height: 150px;
-          }
-
-          .divider {
-            /* Switch back to a vertical divider */
-            width: 3px;
-            height: 80px; 
-            border-radius: 4px;
-          }
-
-          .svg-image {
-          width: 280px; 
-          height: auto;
-          margin-top: 10px;
-        } */ 
-
-        .rich-line {
-          /* Restore original font size */
-          font-size: 3rem; 
-        }
-        }
-	  .social-sidebar {
-            position: fixed; /* This is the key property that makes it "stick" */
-            top: 50%; /* Positions it vertically in the middle of the screen */
-            left: 50px; /* Positions it from the left edge of the screen */
-            transform: translateY(-50%); /* This perfectly centers it vertically */
-            z-index: 1000; /* Ensures it stays on top of other page content */
-            
-            display: flex;
-            flex-direction: column; /* Stacks the icons on top of each other */
-            gap: 1px; /* Adds space between the icons */
-            
-            background-color: #0e0101e6;
-            padding: 15px 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(232, 226, 226, 0.828);
-            margin-top: 110px;
-        }
-
-        /* Styling for the individual icon links */
-        .social-sidebar a {
-            color: #fff5f5; /* Icon color */
-            font-size: 24px; /* Icon size */
-            transition: transform 0.2s ease-in-out, color 0.2s;
-        }
-
-        /* Adds a nice effect when you hover over the icons */
-        .social-sidebar a:hover {
-            color: #007bff; /* Change color on hover */
-            transform: scale(1.2); /* Make the icon slightly larger */
-        }
-
   </style>
 </head>
 
@@ -224,25 +115,9 @@ justify-content: center;
 
       <div class="container-fluid">
 
-        <!-- <div class="text-center">
+        <div class="text-center">
           <a href="../index.html"><img class="img-fluid" src="../images/LOGO-Larger.png" href="../index.html" alt="..."></a>
-        </div> -->
-
-        <div class="banner">
-          <img src="brand-globe.png" alt="RICH Globe" class="globe">
-          <div class="divider"></div>
-          <div class="text">
-            <img src="rich-logo.svg" class="svg-image" alt="RICH">
-          </div>
         </div>
-  
-  
-        <div class="social-sidebar">
-                <a href="https://www.instagram.com/richincstudents/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/reach-into-cultural-heights/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.youtube.com/channel/UCqAvWoYXzpvOtIstzJ8LBBg?view_as=subscriber" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.tiktok.com/@reachintoculturalheights" target="_blank"><i class="fab fa-tiktok"></i></a>
-              </div>
 
         <div class="site-navbar bg-light">
           <div class="py-1">
@@ -314,14 +189,14 @@ justify-content: center;
               Your browser does not support the video tag.
             </video>
           </div>
-          <!-- <div class="text-center" style="display: grid; place-items: center;"><br>
+          <div class="text-center" style="display: grid; place-items: center;"><br>
             <h6 class="text-center" style="width: 80%;">Make a difference.</h6>
-          </div> -->
+          </div>
 
-          <!-- <div class="container text-center">
+          <div class="container text-center">
             <button class="portalbutton" style=" padding-bottom: 1px; font-size: 25px;" onclick="window.location.href='../donate.html'" type="button"> Donate </button><br><br>
           </div>
-          <br> -->
+          <br>
 
           <div style="margin-top: -100px;" class="site-section site-block-feature">
             <div class="container">
@@ -333,7 +208,7 @@ justify-content: center;
               <h5 style="color:black; text-align: center ">RICH has been guiding young leaders on their journeys towards Academic, Career, and Life Success <br> using our <b>4 Guiding Principles</b> since <b>1992</b>:</h5>
 
               <div class=" listCenter ">
-                <ol  style="color: black;">
+                <ol  style="color = black;">
                   <li><b> I Matter</b></li>
                   <li><b> I Am Responsible for my Behavior</b></li>
                   <li><b> I Am Considerate of my Classmates </b></li>
@@ -464,9 +339,9 @@ justify-content: center;
 
                                               <h4 id="challenge1" style="margin-top: -70px;">Join us on Social Media for the #richimatterchallenge. We want to hear the story behind why YOU matter! </h4>
                                               <h6 id="challenge2">We thank you for supporting our next generation of leaders. </h6><br>
-                                              <!-- <div class="container text-center">
+                                              <div class="container text-center">
                                                 <button class="portalbutton" style=" padding-bottom: 1px; font-size: 25px;" onclick="window.location.href='../donate.html'" type="button"> Donate </button><br><br>
-                                              </div> -->
+                                              </div>
 
                                               <br>
 

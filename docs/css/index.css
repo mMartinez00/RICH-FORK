@@ -1,0 +1,191 @@
+.hidden {
+  display: none;
+}
+
+:root {
+  --color-header-bg: #ddd;
+  --color-bg: #FFFFFF;
+  --color-text: #2b3a55;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+}
+
+
+/* ===================== HERO SECTION ===================== */
+.hero-slideshow {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  background-size: 100%;
+  background-position: center;
+  animation: slideShow 25s infinite steps(1), zoomIn 25s infinite;
+}
+
+/* Zoom-in effect synced with slideshow */
+@keyframes zoomIn {
+  0% {
+    background-size: 100%;
+  }
+  20% {
+    background-size: 110%;
+  }
+
+  /* Keep zoomed in until next image switch */
+  20.01% {
+    background-size: 100%;
+  }
+  40% {
+    background-size: 110%;
+  }
+
+  40.01% {
+    background-size: 100%;
+  }
+  60% {
+    background-size: 110%;
+  }
+
+  60.01% {
+    background-size: 100%;
+  }
+  80% {
+    background-size: 110%;
+  }
+
+  80.01% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
+
+/* Image swap (instant change at each zoom end) */
+@keyframes slideShow {
+  0%, 19.99%  { background-image: url('/RICH/images/graduate-image6.jpg'); }
+  20%, 39.99% { background-image: url('/RICH/image7.jpg'); }
+  40%, 59.99% { background-image: url('/RICH/images/rich-image4.jpg'); }
+  60%, 79.99% { background-image: url('/RICH/Image5.jpg'); }
+  /* 80%, 99.99% { background-image: url('/RICH/image0.jpeg'); } */
+  80%, 99.99% { background-image: url('/RICH/Image3.jpg'); }
+  100%        { background-image: url('/RICH/images/graduate-image6.jpg'); }
+}
+
+.hero-slideshow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.428), transparent);
+  z-index: 0;
+}
+
+.hero-slideshow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(0, 0, 0, 0.25) 40%,     
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-left: 6rem;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.hero-content h1 span {
+  color: #ff7733;
+}
+
+.hero-content p {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #eee;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.9rem 2rem;
+  background: #ff7733;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #ff5500;
+  transform: translateY(-2px);
+}
+
+
+
+/* Parallex Section */
+
+.parallax-section {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/RICH/images/cliff-stars-bg.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+
+.vision-content {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+/* .parallax-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+} */
+
+.vision-content h2 {
+  color: white;
+  font-size: 100px;
+}
+

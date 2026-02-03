@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f8fc;
+}
+
+.contact-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  background: linear-gradient(145deg, #f1f2f4 0%, #d7dbe3 100%);
+  z-index: 0;
+}
+
+.form {
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* --- RIGHT SIDE FORM --- */
+.contact-form {
+  background: linear-gradient(135deg, #162957, #1f3d82);
+  position: relative;
+  padding: 2.5rem;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.circle.one {
+  width: 130px;
+  height: 130px;
+  top: 120px;
+  right: -40px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.circle.two {
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  right: 30px;
+  background: rgba(173, 216, 230, 0.25);
+}
+
+.contact-form::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: #2b3e6f;
+  transform: rotate(45deg);
+  top: 50px;
+  left: -13px;
+}
+
+
+.title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  z-index: 3;
+}
+
+
+.input-container {
+  position: relative;
+  margin-bottom: 1.4rem;
+  z-index: 3;
+}
+
+.input {
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  border-radius: 25px;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #f79533;
+}
+
+textarea.input {
+  min-height: 120px;
+  resize: none;
+}
+
+/* --- LABELS (floating) --- */
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  background: transparent;
+  padding: 0 4px;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+/* FLOAT ON FOCUS */
+.input:focus + label {
+  top: 0;
+  left: 16px;
+  font-size: 0.75rem;
+  color: #f79533;
+  background: #2b3e6f;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+/* FLOAT WHEN INPUT HAS TEXT */
+.input:not(:placeholder-shown) + label {
+  top: 0;
+  left: 16px;
+  font-size: 0.75rem;
+  color: #f79533;
+  background: #2b3e6f;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b3e6f;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 3;
+}
+
+.btn:hover {
+  background: #f79533;
+  color: #fff;
+}
+
+/* --- LEFT SIDE INFO --- */
+.contact-info {
+  padding: 2.5rem;
+}
+
+.contact-info .title {
+  color: #162957;
+}
+
+.text {
+  color: #333;
+  margin: 1rem 0 1.8rem;
+}
+
+.information {
+  display: flex;
+  color: #444;
+  margin: 0.6rem 0;
+}
+
+.information i {
+  color: #f36f21;
+  margin-right: 0.8rem;
+  margin-top: 6px;
+  font-size: 1.2rem;
+}
+
+.social-media {
+  margin-top: 3.3rem;
+}
+
+.social-media p {
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+.social-media p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -15px;
+  width: 100%;
+  height: 1px; 
+  background: #162957;
+  border-radius: 2px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #162957;
+  color: #fff;
+  margin-right: 0.4rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #f36f21;
+}
+
+/* --- BACKGROUND DECORATION --- */
+.brand-logo {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  bottom: 40%;
+  right: 50%;
+  transform: translate(-40%, 15%);
+  z-index: -1;
+  pointer-events: none;
+  box-shadow: inset 0 0 60px rgba(13, 36, 79, 0.25);
+  animation: spin 60s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-40%, 15%) rotate(0deg);
+  }
+  to {
+    transform: translate(-40%, 15%) rotate(360deg);
+  }
+}
