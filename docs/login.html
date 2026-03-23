@@ -76,7 +76,7 @@
 
     .feature {
       font-weight: 500;
-      color: black;
+      color: white;
     }
 
     #footerSpacing {
@@ -239,49 +239,58 @@
     <div id="footerSpacing" class="text-center">
       <div id="piaContainer" class="container">
 
-        <div class="col-md-8 mx-auto no-sidebar">
+        <div class="col-lg-10 mx-auto no-sidebar">
           <div class="shapely-content">
+              <div class="row login-layout">
+                <div class="col-lg-6 mb-4 mb-lg-0 login-column">
+                <div class="login-left login-card">
+                  <div class="login-left-content">
+                    <h4 class = "feature">
+                      The RICH portal is an online belonging community that features:
+                    </h4>
+                    <ul>
+                      <li class = "feature one">RICH 4 guiding principles</li>
+                      <li class = "feature two">Essential Academic Tutorials</li>
+                      <li class = "feature three">Engaging Group Discussions</li>
+                      <li class = "feature four">Impactful Google Classroom Discussion</li>
+                      <li class = "feature five">Fun Activities Supporting RICH Program Principles</li>
+                    </ul>
 
-            <h4 class = "feature">
-              The RICH portal is an online belonging community that features:
-            </h4>
-            <ul>
-              <li class = "feature one">RICH 4 guiding principles</li>
-              <li class = "feature two">Essential Academic Tutorials</li>
-              <li class = "feature three">Engaging Group Discussions</li>
-              <li class = "feature four">Impactful Google Classroom Discussion</li>
-              <li class = "feature five">Fun Activities Supporting RICH Program Principles</li>
-            </ul>
-
-            <br/>
-            <div class="container" id="LoginForm">
-              <form onsubmit="return Login()" action="Account/portal-home.html">
-                <h2 style="text-align: center; color: white;"> SIGN IN </h2>
-                <h3 style="text-align: center; color: white;">RICH STUDENTS</h3>
-                <div class="form-group">
-                  <label style="float:left;" for="userName">Username</label>
-                  <input type="email" class="form-control" id="uEmail" required></input>
-                </div>
-                <div class="form-group">
-                  <label style="float:left;" for="userPass"> Password</label>
-                  <input type="password" class="form-control" id="uPass" required></input>
-                </div>
-                <div id="falseCredentials" class="container" style="display: none;">
-                  <div class="alert alert-danger" role="alert">
-                    Hi there! Looks like one of your credentials is incorrect.
                   </div>
                 </div>
+              </div>
 
-                <div class="form-group">
-                  <a class="formlink" href="loginAdmin.html"> Go To Adminstrator Account </a>
+              <div class="col-lg-6 login-column">
+                <div class="container" id="LoginForm">
+                  <form onsubmit="return Login()" action="Account/portal-home.html">
+                    <h2 style="text-align: center; color: white;"> SIGN IN </h2>
+                    <h3 style="text-align: center; color: white;">RICH STUDENTS</h3>
+                    <div class="form-group">
+                      <label style="float:left;" for="userName">Username</label>
+                      <input type="email" class="form-control" id="uEmail" required></input>
+                    </div>
+                    <div class="form-group">
+                      <label style="float:left;" for="userPass"> Password</label>
+                      <input type="password" class="form-control" id="uPass" required></input>
+                    </div>
+                    <div id="falseCredentials" class="container" style="display: none;">
+                      <div class="alert alert-danger" role="alert">
+                        Hi there! Looks like one of your credentials is incorrect.
+                      </div>
+                    </div>
+    
+                    <div class="form-group">
+                      <a class="formlink" href="loginAdmin.html"> Go To Adminstrator Account </a>
+                    </div>
+                    <br />
+                    <div class="buttoncontainer">
+                      <button type="submit"> SIGN IN </button>
+                    </div>
+                  </form>
                 </div>
-                <br />
-                <div class="buttoncontainer">
-                  <button type="submit"> SIGN IN </button>
-                </div>
-              </form>
+              </div>
+
             </div>
-
 
           </div>
         </div>
