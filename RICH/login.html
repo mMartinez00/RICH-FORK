@@ -98,6 +98,9 @@
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/header.css">
+  <!-- <link rel="stylesheet" href="css/login.css">   -->
   /> 
 </head>
 
@@ -115,6 +118,54 @@
     </div> <!-- .site-mobile-menu -->
 
 
+    <!--LOAD HEADER (Header Styles Contained in header.css)-->
+    <!-- <div id="header-container"></div>
+    <script>
+      fetch("header.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("header-container").innerHTML = html);
+    </script> -->
+
+
+  <!-- Login Section -->
+<section class="login-wrapper" hidden>
+  <div class="login-box">
+    <h2>Welcome Back to RICH</h2>
+    <p>Log in to access the RICH Portal and continue reaching new heights.</p>
+
+    <!-- Keep the old backend structure -->
+    <form class="login-form" onsubmit="return Login()" action="Account/portal-home.html">
+      <div class="input-field">
+        <i class="fas fa-user"></i>
+        <!-- use the same ID the backend expects -->
+        <input type="email" id="uEmail" placeholder="Username" required />
+      </div>
+
+      <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <!-- same ID as original -->
+        <input type="password" id="uPass" placeholder="Password" required />
+      </div>
+
+      <div id="falseCredentials" class="alert-box" style="display: none;">
+        <div class="alert alert-danger" role="alert">
+          Hi there! Looks like one of your credentials is incorrect.
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Sign In</button>
+    </form>
+
+    <div class="social-login">
+      <p>or sign in with</p>
+      <a href="#"><i class="fab fa-google"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</section>
+
+    <!--MADE HIDDEN-->
     <div style="top: 0px;" id="myLogo" class="site-navbar-wrap js-site-navbar bg-white">
 
 
@@ -235,8 +286,8 @@
       </div>
     </div>
 
-    <div id="logoHeight" style="height: 350px;"></div>
-    <div id="footerSpacing" class="text-center">
+    <div id="logoHeight" style="height: 350px;" ></div>
+    <div id="footerSpacing" class="text-center" >
       <div id="piaContainer" class="container">
 
         <div class="col-md-8 mx-auto no-sidebar">
