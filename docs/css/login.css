@@ -1,0 +1,258 @@
+.login-portal-section {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #f1f2f4 0%, #d7dbe3 100%);
+  padding: 3rem 0;
+}
+
+.login-portal-card {
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.col-lg-6 {
+  padding: 0;
+}
+
+.login-info-panel {
+  position: relative;
+  min-height: 100%;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login-bg-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;   
+  transform: translate(-50%, -50%);
+  opacity: .75;
+  z-index: 1;
+  filter: blur(.8px);
+  animation: spin 60s linear infinite;
+}
+
+/* Spinning image keyframe */
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.login-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(250, 250, 250, .60);
+  z-index: 2;
+}
+
+.login-info-content {
+  width: 100%;
+  z-index: 3;
+  text-align: left;
+}
+
+.portal-title {
+  color: #162957;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.portal-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portal-feature-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.portal-feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f36f21;
+}
+
+.login-form-panel {
+  background: linear-gradient(135deg, #162957, #1f3d82);
+  padding: 2.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-form {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.login-heading {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-subheading {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 1.4rem;
+}
+
+.input {
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  border-radius: 25px;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #f79533;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+  pointer-events: none;
+  padding: 0 4px;
+}
+
+.input:focus + label,
+.input:not(:placeholder-shown) + label {
+  top: 0;
+  left: 16px;
+  font-size: 0.75rem;
+  color: #f79533;
+  background: #2b3e6f;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+.login-links {
+  text-align: center;
+}
+
+.formlink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.formlink:hover {
+  color: #f79533;
+}
+
+.login-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b3e6f;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #f79533;
+  color: #fff;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.circle.one {
+  width: 130px;
+  height: 130px;
+  top: 100px;
+  right: 0px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.circle.two {
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  right: 30px;
+  background: rgba(173, 216, 230, 0.25);
+}
+
+.circle.three {
+  width: 65px;
+  height: 65px;
+  top: 400px;
+  left: -30px;
+  background: rgba(173, 216, 230, 0.50);
+}
+
+.login-form-panel::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: #2b3e6f;
+  transform: rotate(45deg);
+  top: 50px;
+  left: -13px;
+  z-index: 3;
+}
+
+@media (max-width: 991.98px) {
+  .login-info-panel,
+  .login-form-panel {
+    padding: 2rem;
+  }
+
+  .portal-title,
+  .login-heading {
+    font-size: 1.7rem;
+  }
+}
