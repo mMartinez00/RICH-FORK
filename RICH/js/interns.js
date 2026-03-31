@@ -1,7 +1,7 @@
 const internsRaw = [
 
      // ==== 2026 Winter ====
-     {
+/*     {
      name: "Nafisa Tabassum",
      role: "Software Engineering Intern",
      img: "intern_images/NafisaTabassum.jpg",
@@ -15,7 +15,7 @@ const internsRaw = [
           bio: `To be filled in`
      }
     ] 
-   },
+   }, */
      // ===== 2025 — Summer =====
      {
      name: "Shakil Nabil",
