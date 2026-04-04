@@ -1,11 +1,12 @@
 .login-portal-section {
   min-height: 100vh;
-  background: linear-gradient(145deg, #f1f2f4 0%, #d7dbe3 100%);
+  background: #0d1734;
   padding: 3rem 0;
 }
 
 .login-portal-card {
-  max-width: 900px;
+  width: min(900px, 92vw);
+  min-height: 500px;
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -228,7 +229,7 @@
 .circle.three {
   width: 65px;
   height: 65px;
-  top: 400px;
+  top: 450px;
   left: -30px;
   background: rgba(173, 216, 230, 0.50);
 }
@@ -243,6 +244,32 @@
   top: 50px;
   left: -13px;
   z-index: 3;
+}
+
+/* Canvas */
+.bg-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Places canvas behind content */
+  display: block; 
+}
+
+.space-page-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(120, 160, 255, 0.15),
+    rgba(20, 40, 90, 0.25)
+  );
+  z-index: 1;
+}
+
+.login-portal-section .container {
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 991.98px) {
