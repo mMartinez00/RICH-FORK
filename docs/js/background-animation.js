@@ -1,3 +1,4 @@
+// Variables
 const canvas = document.getElementById("bg-canvas");
 const ctx = canvas.getContext("2d");
 
@@ -6,6 +7,12 @@ let time = 0;
 const STAR_COUNT = 140;
 const dpr = window.devicePixelRatio || 1;
 
+const ship = document.getElementById("space-ship");
+const SHIP_WIDTH = 90;
+const SHIP_HEIGHT = 60;
+let currentAngle = -20; // default slight upward tilt
+
+// Canvas
 function resizeCanvas() {
   const rect = canvas.parentElement.getBoundingClientRect();
 
@@ -30,7 +37,6 @@ function createStars(width, height) {
       radius: Math.random() * 2 + 0.4,
       speed: Math.random() * 0.2 + 0.03,
 
-      // alpha: Math.random() * 0.5 + 0.5
       // Twinkle properties
       baseAlpha: Math.random() * 0.5 + 0.4,   // baseline brightness
       twinkleSpeed: Math.random() * 0.02 + 0.01,
@@ -77,3 +83,28 @@ resizeCanvas();
 drawStars();
 
 window.addEventListener("resize", resizeCanvas);
+
+// Spaceship
+if (ship) {
+  function flyAcross() {
+    const startTop = 10 + Math.random() * 10;
+
+    // Start off-screen (left)
+    ship.style.transition = "none";
+    ship.style.left = "-120px";
+    ship.style.top = `${startTop}%`;
+
+    // Force browser to apply instantly
+    ship.offsetHeight;
+
+    // Animate across
+    ship.style.transition = "left 12s linear";
+    ship.style.left = "110vw"; // move fully across screen
+  }
+
+  // Start once
+  flyAcross();
+
+  // Repeat every ~20 seconds
+  setInterval(flyAcross, 20000);
+}
